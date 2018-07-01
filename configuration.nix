@@ -8,7 +8,6 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
-      ./network/intel-2200bg.nix
     ];
 
   # Use the systemd-boot EFI boot loader.

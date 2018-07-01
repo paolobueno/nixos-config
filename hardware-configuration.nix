@@ -12,6 +12,9 @@
   boot.kernelModules = [ "kvm-intel" ];
   boot.extraModulePackages = [ ];
   boot.blacklistedKernelModules = [ "nouveau" ];
+  boot.extraModprobeConfig = ''
+    options ath10k_core skip_otp=y
+  ''
   hardware.enableAllFirmware = true;
 
   fileSystems."/" =
