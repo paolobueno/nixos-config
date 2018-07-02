@@ -79,6 +79,8 @@
     ];
   };
 
+  # hardware.bumblebee.enable = true;
+
   # disable card with bbswitch by default
   # hardware.nvidiaOptimus.disable = true;
   # install nvidia drivers in addition to intel one
