@@ -15,7 +15,7 @@
   boot.extraModprobeConfig = ''
     options ath10k_core skip_otp=y
   '';
-  hardware.enableAllFirmware = true;
+  # hardware.enableAllFirmware = true;
 
   fileSystems."/" =
     { device = "/dev/disk/by-uuid/955d8afd-4e61-4f37-8c56-ef7439423e8c";

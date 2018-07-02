@@ -52,11 +52,6 @@ pkgs : with pkgs; [
   python
   nodejs-10_x
 
-  # fonts
-  xlsfonts
-  fira-code
-  powerline-fonts
-
   # terminal stuff
   tmux
   st
@@ -68,8 +63,10 @@ pkgs : with pkgs; [
 
   docker
 
-  # applets
+  # gui applets
   networkmanagerapplet
+  blueman
+  pavucontrol
 
   # extra
   dropbox

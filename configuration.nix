@@ -16,8 +16,7 @@
 
   # networking.hostName = "nixos"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
-
-  # Select internationalisation properties.
+# Select internationalisation properties.
   i18n = {
     consoleFont = "Lat2-Terminus16";
     consoleKeyMap = "us";
@@ -28,6 +27,8 @@
   time.timeZone = "Europe/Amsterdam";
 
   sound.enable = true;
+  hardware.bluetooth.enable = true;
+
   hardware.pulseaudio.enable = true;
   hardware.opengl.driSupport32Bit = true;
   hardware.pulseaudio.support32Bit = true;
@@ -45,6 +46,7 @@
     syntaxHighlighting.enable = true;
     ohMyZsh.enable = true;
     ohMyZsh.plugins = ["git"];
+    ohMyZsh.theme = "robbyrussell";
   };
 
   networking = {
@@ -59,6 +61,12 @@
   # services.xserver.layout = "us";
   # services.xserver.xkbOptions = "eurosign:e";
 
+  fonts.fonts = with pkgs; [
+    fira-code
+    powerline-fonts
+    xlsfonts
+  ];
+
   users.users.paolo = {
     isNormalUser = true;
     uid = 1000;
@@ -70,6 +78,12 @@
       pkgs.steam-run
     ];
   };
+
+  # disable card with bbswitch by default
+  # hardware.nvidiaOptimus.disable = true;
+  # install nvidia drivers in addition to intel one
+  # hardware.opengl.extraPackages = [ config.boot.kernelPackages.nvidia_x11.out ];
+  # hardware.opengl.extraPackages32 = [ pkgs_i686.linuxPackages.nvidia_x11.out ];
 
   nixpkgs.config.allowUnfree = true;
   environment.systemPackages = (import ./packages.nix pkgs);
