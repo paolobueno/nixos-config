@@ -25,7 +25,7 @@ pkgs : {
     xkbVariant = ",";
     xkbOptions = "grp:toggle";
 
-    videoDrivers = [ "intel" "xf86-video-intel-2015-11-14" "xf86-video-intel" "intel-2015-11-14" ];
+    # videoDrivers = [ "intel" "xf86-video-intel-2015-11-14" "xf86-video-intel" "intel-2015-11-14" ];
 
     desktopManager = {
       xterm.enable = false;
@@ -35,7 +35,7 @@ pkgs : {
 
     displayManager = {
       slim.enable = true;
-      # slim.defaultUser = "paolo";
+      slim.defaultUser = "paolo";
       sessionCommands = ''
         ${pkgs.xlibs.xset}/bin/xset r rate 230 65
         ${pkgs.xlibs.xsetroot}/bin/xsetroot -cursor_name left_ptr
@@ -44,8 +44,6 @@ pkgs : {
 
     windowManager = {
       i3.enable = true;
-      # xmonad.enable = true;
-      # xmonad.enableContribAndExtras = true;
       default = "i3";
     };
 

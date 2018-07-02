@@ -28,7 +28,6 @@ pkgs : with pkgs; [
   newsboat            # RSS Reader
   nixops              # Devops tools by Nix
   nnn                 # File browser
-  nodejs-10_x          # JavaScript runtime
   pass                # Password manager
   pidgin-with-plugins # Chat client
   psmisc              # Process management utilities
@@ -42,31 +41,44 @@ pkgs : with pkgs; [
   wget                # Web client
   which               # Linux executable finder
   xdo                 # X Server client
-  xlsfonts
-  fira-code
   xorg.xev
   xorg.xf86videointel
   xsel                # Clipboard manager
   zip                 # Zip archive creator
   pciutils
 
+  # programming language runtimes
   ruby
+  python
+  nodejs-10_x
 
-  zsh
+  # fonts
+  xlsfonts
+  fira-code
+  powerline-fonts
+
+  # terminal stuff
   tmux
+  st
+
+  # IDEs
   vscode
   arduino
   android-studio
+
   docker
-  st
+
+  # applets
   networkmanagerapplet
 
+  # extra
   dropbox
-  steam
+
 ] ++ (with haskellPackages; [
   ghc                 # Haskell compiler
 ]) ++ (with nodePackages; [
   dat                 # Decentralized web client
   node2nix            # Converts package.json to default.nix
   yarn                # Alternative to npm
+  eslint              # linter
 ])

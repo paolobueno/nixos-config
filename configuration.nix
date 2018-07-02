@@ -29,12 +29,23 @@
 
   sound.enable = true;
   hardware.pulseaudio.enable = true;
+  hardware.opengl.driSupport32Bit = true;
+  hardware.pulseaudio.support32Bit = true;
+  boot.extraModprobeConfig = ''
+    options ath10k_core skip_otp=y
+  '';
+  hardware.enableAllFirmware = true;
+
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
-  # programs.bash.enableCompletion = true;
-  # programs.mtr.enable = true;
-  # programs.gnupg.agent = { enable = true; enableSSHSupport = true; };
+  programs.zsh = {
+    enable = true;
+    enableCompletion = true;
+    syntaxHighlighting.enable = true;
+    ohMyZsh.enable = true;
+    ohMyZsh.plugins = ["git"];
+  };
 
   networking = {
     firewall.enable = true;
@@ -48,12 +59,16 @@
   # services.xserver.layout = "us";
   # services.xserver.xkbOptions = "eurosign:e";
 
-  # Define a user account. Don't forget to set a password with ‘passwd’.
-  users.extraUsers.paolo = {
+  users.users.paolo = {
     isNormalUser = true;
     uid = 1000;
     initialPassword = "test";
     extraGroups = ["wheel" "networkmanager" "docker"];
+    shell = pkgs.zsh;
+    packages = [
+      pkgs.steam
+      pkgs.steam-run
+    ];
   };
 
   nixpkgs.config.allowUnfree = true;
