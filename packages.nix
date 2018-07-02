@@ -55,6 +55,7 @@ pkgs : with pkgs; [
   # terminal stuff
   tmux
   st
+  htop
 
   # IDEs
   vscode
