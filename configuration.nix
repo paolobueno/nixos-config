@@ -27,18 +27,21 @@
   # Set your time zone.
   time.timeZone = "Europe/Amsterdam";
 
+  sound.enable = true;
+  hardware.pulseaudio.enable = true;
+
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
   # programs.bash.enableCompletion = true;
   # programs.mtr.enable = true;
   # programs.gnupg.agent = { enable = true; enableSSHSupport = true; };
 
-  # networking = {
-    # firewall.enable = true;
-    # firewall.allowedTCPPorts = [3000 9418];
-    # networkmanager.enable = true;
-    # hostName = "paolo-nixos";
-  # };
+  networking = {
+    firewall.enable = true;
+    firewall.allowedTCPPorts = [3000 9418];
+    networkmanager.enable = true;
+    hostName = "paolo-nixos";
+  };
 
   # Enable the X11 windowing system.
   # services.xserver.enable = true;
@@ -61,6 +64,6 @@
   # compatible, in order to avoid breaking some software such as database
   # servers. You should change this only after NixOS release notes say you
   # should.
-  system.stateVersion = "18.03"; # Did you read the comment?
+  system.nixos.stateVersion = "18.03"; # Did you read the comment?
 }
 

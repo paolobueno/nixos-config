@@ -1,20 +1,20 @@
 pkgs : {
 
-  # neo4j.enable = false;
+  neo4j.enable = false;
   ipfs.enable = false;
-  # redis.enable = true;
-  teamviewer.enable = false;
-  # mysql.enable = true;
-  # couchdb.enable = true;
-  # postgresql.enable = false;
-  # printing.enable = true;
+  redis.enable = true;
+  teamviewer.enable = true;
+  mysql.enable = true;
+  couchdb.enable = true;
+  postgresql.enable = false;
+  printing.enable = true;
   illum.enable = true;
 
-  # mysql.package = pkgs.mysql;
-  # couchdb.package = pkgs.couchdb2;
-  # postgresql.package = pkgs.postgresql;
-  # postgresql.authentication = "host all all 127.0.0.1/32 trust";
-  # printing.drivers = [ pkgs.hplip pkgs.gutenprint ];
+  mysql.package = pkgs.mysql;
+  couchdb.package = pkgs.couchdb2;
+  postgresql.package = pkgs.postgresql;
+  postgresql.authentication = "host all all 127.0.0.1/32 trust";
+  printing.drivers = [ pkgs.hplip pkgs.gutenprint ];
 
   xserver = {
     enable = true;

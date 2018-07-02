@@ -8,7 +8,7 @@ pkgs : with pkgs; [
   arandr              # Screen control
   bashmount           # Mount USB storage
   bind                # DNS utilities
-  chromium            # Web browser
+  google-chrome       # Web browser
   curl                # Web client
   dmenu2              # Customizable start meny used in xmonad config
   feh                 # Image viewer
@@ -28,7 +28,7 @@ pkgs : with pkgs; [
   newsboat            # RSS Reader
   nixops              # Devops tools by Nix
   nnn                 # File browser
-  nodejs-8_x          # JavaScript runtime
+  nodejs-10_x          # JavaScript runtime
   pass                # Password manager
   pidgin-with-plugins # Chat client
   psmisc              # Process management utilities
@@ -43,11 +43,26 @@ pkgs : with pkgs; [
   which               # Linux executable finder
   xdo                 # X Server client
   xlsfonts
+  fira-code
   xorg.xev
   xorg.xf86videointel
   xsel                # Clipboard manager
   zip                 # Zip archive creator
   pciutils
+
+  ruby
+
+  zsh
+  tmux
+  vscode
+  arduino
+  android-studio
+  docker
+  st
+  networkmanagerapplet
+
+  dropbox
+  steam
 ] ++ (with haskellPackages; [
   ghc                 # Haskell compiler
 ]) ++ (with nodePackages; [
