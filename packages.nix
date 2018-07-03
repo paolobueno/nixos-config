@@ -58,6 +58,7 @@ pkgs : with pkgs; [
   st
   htop
   jq
+  insomnia
 
   # IDEs
   vscode
@@ -69,8 +70,9 @@ pkgs : with pkgs; [
   blueman
   pavucontrol
 
-  # extra
+  # extra, personal
   dropbox
+  ncmpcpp
 
 ] ++ (with haskellPackages; [
   ghc                 # Haskell compiler
