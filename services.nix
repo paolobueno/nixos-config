@@ -17,6 +17,21 @@ pkgs : {
   postgresql.authentication = "host all all 127.0.0.1/32 trust";
   printing.drivers = [ pkgs.hplip pkgs.gutenprint ];
 
+  mopidy = {
+    # enable = true;
+    configuration = ''
+[mpd]
+hostname = ::
+
+[spotify]
+username = paolohaji@gmail.com
+password = yugidlk77
+client_id = 1b4d3af3-858f-473d-8403-ac3f5eb2a5c0
+client_secret = _AcX5r-LZbY2P2shnrKVeo1WfsVUVdHsZcX24q-s-g4=
+'';
+    extensionPackages = [ pkgs.mopidy-spotify ];
+  };
+
   xserver = {
     enable = true;
     enableTCP = false;
