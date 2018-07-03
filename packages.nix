@@ -73,6 +73,7 @@ pkgs : with pkgs; [
   # extra, personal
   dropbox
   ncmpcpp
+  primus
 
 ] ++ (with haskellPackages; [
   ghc                 # Haskell compiler

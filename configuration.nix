@@ -35,7 +35,7 @@
   boot.extraModprobeConfig = ''
     options ath10k_core skip_otp=y
   '';
-  hardware.enableAllFirmware = true;
+  # hardware.enableAllFirmware = true;
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
@@ -60,6 +60,7 @@
   # services.xserver.layout = "us";
   # services.xserver.xkbOptions = "eurosign:e";
 
+  fonts.enableDefaultFonts = true;
   fonts.fonts = with pkgs; [
     fira-code
     powerline-fonts
@@ -81,6 +82,7 @@
   # #NVIDIA
 
   # hardware.bumblebee.enable = true;
+  # hardware.bumblebee.connectDisplay = true;
 
   # disable card with bbswitch by default
   # hardware.nvidiaOptimus.disable = true;

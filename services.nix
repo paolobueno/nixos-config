@@ -41,7 +41,7 @@ client_secret = _AcX5r-LZbY2P2shnrKVeo1WfsVUVdHsZcX24q-s-g4=
     xkbVariant = ",";
     xkbOptions = "grp:toggle";
 
-    # videoDrivers = [ "intel" "xf86-video-intel-2015-11-14" "xf86-video-intel" "intel-2015-11-14" ];
+    videoDrivers = [ "nvidia" "intel" ];
 
     desktopManager = {
       xterm.enable = false;
