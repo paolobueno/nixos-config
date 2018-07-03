@@ -37,7 +37,6 @@
   '';
   hardware.enableAllFirmware = true;
 
-
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
   programs.zsh = {
@@ -79,6 +78,8 @@
     ];
   };
 
+  # #NVIDIA
+
   # hardware.bumblebee.enable = true;
 
   # disable card with bbswitch by default
@@ -86,6 +87,8 @@
   # install nvidia drivers in addition to intel one
   # hardware.opengl.extraPackages = [ config.boot.kernelPackages.nvidia_x11.out ];
   # hardware.opengl.extraPackages32 = [ pkgs_i686.linuxPackages.nvidia_x11.out ];
+
+  virtualization.docker.enable = "true";
 
   nixpkgs.config.allowUnfree = true;
   environment.systemPackages = (import ./packages.nix pkgs);

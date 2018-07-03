@@ -10,7 +10,7 @@ pkgs : with pkgs; [
   bind                # DNS utilities
   google-chrome       # Web browser
   curl                # Web client
-  dmenu2              # Customizable start meny used in xmonad config
+  # dmenu2              # Customizable start meny used in xmonad config
   feh                 # Image viewer
   firefox             # Web browser
   gcc                 # C compiler
@@ -47,22 +47,22 @@ pkgs : with pkgs; [
   zip                 # Zip archive creator
   pciutils
 
-  # programming language runtimes
+  # runtimes
   ruby
   python
   nodejs-10_x
+  docker
 
-  # terminal stuff
+  # terminal and utils
   tmux
   st
   htop
+  jq
 
   # IDEs
   vscode
   arduino
   android-studio
-
-  docker
 
   # gui applets
   networkmanagerapplet
@@ -79,4 +79,6 @@ pkgs : with pkgs; [
   node2nix            # Converts package.json to default.nix
   yarn                # Alternative to npm
   eslint              # linter
+  bower               # legacy front end package manager
+  grunt-cli           # legacy task runner
 ])

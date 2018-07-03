@@ -6,6 +6,7 @@ pkgs : {
   teamviewer.enable = true;
   mysql.enable = true;
   couchdb.enable = true;
+  mongodb.enable = true;
   postgresql.enable = false;
   printing.enable = true;
   illum.enable = true;
