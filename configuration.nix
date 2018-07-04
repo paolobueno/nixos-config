@@ -27,11 +27,21 @@
   time.timeZone = "Europe/Amsterdam";
 
   sound.enable = true;
-  hardware.bluetooth.enable = true;
+  hardware.bluetooth = {
+    enable = true;
+    extraConfig = "
+      [General]
+      Enable=Source,Sink,Media,Socket
+    ";
+  };
 
-  hardware.pulseaudio.enable = true;
+  hardware.pulseaudio = {
+    enable = true;
+    package = pkgs.pulseaudioFull;
+    support32Bit = true;
+  };
+
   hardware.opengl.driSupport32Bit = true;
-  hardware.pulseaudio.support32Bit = true;
   boot.extraModprobeConfig = ''
     options ath10k_core skip_otp=y
   '';
