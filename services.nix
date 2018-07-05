@@ -5,8 +5,6 @@ pkgs : {
   redis.enable = true;
   teamviewer.enable = true;
   mysql.enable = true;
-  mosquitto.enable = true;
-  mosquitto.host = "0.0.0.0";
   couchdb.enable = true;
   mongodb.enable = true;
   postgresql.enable = false;
@@ -22,8 +20,13 @@ pkgs : {
   postgresql.authentication = "host all all 127.0.0.1/32 trust";
   printing.drivers = [ pkgs.hplip pkgs.gutenprint ];
 
+  mosquitto = {
+    enable = false;
+    host = "0.0.0.0";
+  };
+
   mopidy = {
-    # enable = true;
+    enable = false;
     configuration = ''
 [mpd]
 hostname = ::
