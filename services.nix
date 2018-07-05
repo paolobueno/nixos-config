@@ -11,6 +11,9 @@ pkgs : {
   printing.enable = true;
   illum.enable = true;
 
+  compton.enable = true;
+  compton.backend = "glx";
+
   mysql.package = pkgs.mysql;
   couchdb.package = pkgs.couchdb2;
   postgresql.package = pkgs.postgresql;
