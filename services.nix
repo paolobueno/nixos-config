@@ -5,6 +5,8 @@ pkgs : {
   redis.enable = true;
   teamviewer.enable = true;
   mysql.enable = true;
+  mosquitto.enable = true;
+  mosquitto.host = "0.0.0.0";
   couchdb.enable = true;
   mongodb.enable = true;
   postgresql.enable = false;
@@ -66,16 +68,8 @@ client_secret = _AcX5r-LZbY2P2shnrKVeo1WfsVUVdHsZcX24q-s-g4=
       default = "i3";
     };
 
-    synaptics = {
+    libinput = {
       enable = true;
-      horizEdgeScroll = false;
-      vertEdgeScroll = false;
-      fingersMap = [ 1 3 3 ];
-      twoFingerScroll = true;
-      horizTwoFingerScroll = false;
-      maxSpeed = "1.8";
     };
-
   };
-
 }

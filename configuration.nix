@@ -57,6 +57,7 @@
     ohMyZsh.plugins = ["git"];
     ohMyZsh.theme = "agnoster";
   };
+  programs.adb.enable = true;
 
   networking = {
     firewall.enable = true;
@@ -82,12 +83,17 @@
     isNormalUser = true;
     uid = 1000;
     initialPassword = "test";
-    extraGroups = ["wheel" "networkmanager" "docker"];
+    extraGroups = ["wheel" "networkmanager" "docker" "adbusers"];
     shell = pkgs.zsh;
     packages = [
       pkgs.steam
       pkgs.steam-run
     ];
+  };
+
+  nix = {
+    autoOptimiseStore = true;
+    buildCores = 4;
   };
 
   # #NVIDIA
