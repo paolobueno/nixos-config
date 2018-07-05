@@ -14,9 +14,6 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
-  # networking.hostName = "nixos"; # Define your hostname.
-  # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
-# Select internationalisation properties.
   i18n = {
     consoleFont = "Lat2-Terminus16";
     consoleKeyMap = "us";
@@ -52,10 +49,13 @@
   programs.zsh = {
     enable = true;
     enableCompletion = true;
-    syntaxHighlighting.enable = true;
+    syntaxHighlighting = {
+      enable = true;
+      highlighters = [ "main" "brackets" "pattern" "cursor" "root" "line" ];
+    };
     ohMyZsh.enable = true;
     ohMyZsh.plugins = ["git"];
-    ohMyZsh.theme = "robbyrussell";
+    ohMyZsh.theme = "agnoster";
   };
 
   networking = {
@@ -73,8 +73,9 @@
   fonts.enableDefaultFonts = true;
   fonts.fonts = with pkgs; [
     fira-code
+    fira-code-symbols
     powerline-fonts
-    xlsfonts
+    liberation_ttf
   ];
 
   users.users.paolo = {

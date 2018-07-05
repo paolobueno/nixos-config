@@ -52,18 +52,21 @@ pkgs : with pkgs; [
   python
   nodejs-10_x
   docker
+  nwjs
 
   # terminal and utils
   tmux
   st
+  rxvt_unicode
   htop
   jq
-  insomnia
 
-  # IDEs
+  # IDEs and devtools
   vscode
   arduino
   android-studio
+  insomnia
+  robo3t
 
   # gui applets
   networkmanagerapplet
@@ -74,6 +77,7 @@ pkgs : with pkgs; [
   dropbox
   ncmpcpp
   primus
+  spotify
 
 ] ++ (with haskellPackages; [
   ghc                 # Haskell compiler
