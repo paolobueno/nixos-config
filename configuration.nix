@@ -91,9 +91,22 @@
     ];
   };
 
+
+  systemd.user.services.powertop = {
+    enable = true;
+    description = "powertop autotune service";
+    wantedBy = [ "multi-user.target" ];
+    path = with pkgs; [ powertop ];
+    serviceConfig = {
+      ExecStart = "${pkgs.powertop}/bin/powertop --auto-tune";
+      Type = "oneshot";
+    };
+  };
+
   nix = {
     autoOptimiseStore = true;
     buildCores = 4;
+    gc.automatic = true;
   };
 
   # #NVIDIA

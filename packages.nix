@@ -61,6 +61,12 @@ pkgs : with pkgs; [
   htop
   jq
 
+  # gtk theming
+  lxappearance
+  arc-icon-theme
+  arc-theme
+  moka-icon-theme
+
   # IDEs and devtools
   vscode
   arduino
