@@ -60,6 +60,7 @@ pkgs : with pkgs; [
   rxvt_unicode
   htop
   jq
+  pv
 
   # gtk theming
   lxappearance
