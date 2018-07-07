@@ -10,11 +10,11 @@ pkgs : with pkgs; [
   bind                # DNS utilities
   google-chrome       # Web browser
   curl                # Web client
-  # dmenu2              # Customizable start meny used in xmonad config
   feh                 # Image viewer
   firefox             # Web browser
   gcc                 # C compiler
   git                 # Source control system
+  gitAndTools.hub     # github compiler
   gnome3.dconf        # GNome configuration module used by other gnome software
   gnumake             # Build tool
   gnupg               # Encryption toolset
@@ -24,16 +24,16 @@ pkgs : with pkgs; [
   linuxPackages.perf  # Linux performance tools such as `time`
   lshw                # List hardware
   maim                # Takes screenshots
+  imagemagick         # Image editing suite
   meld                # View differences between text files
-  newsboat            # RSS Reader
   nixops              # Devops tools by Nix
   nnn                 # File browser
   pass                # Password manager
-  pidgin-with-plugins # Chat client
   psmisc              # Process management utilities
   slop                # Screen region selection tool
   tldr                # Linux command line cheat sheet
   transmission        # Torrenting software
+  tixati
   unzip               # Zip archive extractor
   usbutils            # USB device management utilities
   vlc                 # Video player

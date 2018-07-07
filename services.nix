@@ -12,7 +12,7 @@ pkgs : {
   illum.enable = true;
 
   compton.enable = true;
-  compton.backend = "glx";
+  # compton.backend = "glx";
 
   mysql.package = pkgs.mysql;
   couchdb.package = pkgs.couchdb2;
