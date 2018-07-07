@@ -2,8 +2,13 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, pkgs, ... }:
+{ config, pkgs, pkgs_i686, ... }:
 
+# let
+  # # nvidia packages to use
+  # nvidia = config.boot.kernelPackages.nvidia_x11;
+  # nvidia32 = pkgs_i686.linuxPackages.nvidia_x11;
+# in
 {
   imports =
     [ # Include the results of the hardware scan.
@@ -38,7 +43,6 @@
     support32Bit = true;
   };
 
-  hardware.opengl.driSupport32Bit = true;
   boot.extraModprobeConfig = ''
     options ath10k_core skip_otp=y
   '';
@@ -114,11 +118,13 @@
   # hardware.bumblebee.enable = true;
   # hardware.bumblebee.connectDisplay = true;
 
+  hardware.opengl.driSupport32Bit = true;
+
   # disable card with bbswitch by default
   # hardware.nvidiaOptimus.disable = true;
   # install nvidia drivers in addition to intel one
-  # hardware.opengl.extraPackages = [ config.boot.kernelPackages.nvidia_x11.out ];
-  # hardware.opengl.extraPackages32 = [ pkgs_i686.linuxPackages.nvidia_x11.out ];
+  # hardware.opengl.extraPackages = [ nvidia.out ];
+  # hardware.opengl.extraPackages32 = [ nvidia32.out ];
 
   virtualization.docker.enable = "true";
 
