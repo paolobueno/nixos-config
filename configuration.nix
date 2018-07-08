@@ -132,6 +132,10 @@
   environment.systemPackages = (import ./packages.nix pkgs);
   services = (import ./services.nix pkgs);
 
+  boot.extraModProbeConfig = ''
+    options ath10k_core skip_otp=y
+  '';
+
   # This value determines the NixOS release with which your system is to be
   # compatible, in order to avoid breaking some software such as database
   # servers. You should change this only after NixOS release notes say you

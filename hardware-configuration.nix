@@ -11,23 +11,20 @@
   boot.initrd.availableKernelModules = [ "xhci_pci" "ahci" "nvme" "usb_storage" "sd_mod" "rtsx_pci_sdmmc" ];
   boot.kernelModules = [ "kvm-intel" ];
   boot.extraModulePackages = [ ];
-  # boot.blacklistedKernelModules = [ "nouveau" ];
-  boot.extraModprobeConfig = ''
-    options ath10k_core skip_otp=y
-  '';
-  # hardware.enableAllFirmware = true;
 
   fileSystems."/" =
-    { device = "/dev/disk/by-uuid/955d8afd-4e61-4f37-8c56-ef7439423e8c";
+    { device = "/dev/disk/by-uuid/3ec5f5b5-9ca3-4154-90d7-d60a64b40366";
       fsType = "ext4";
     };
 
   fileSystems."/boot" =
-    { device = "/dev/disk/by-uuid/240E-3FED";
+    { device = "/dev/disk/by-uuid/7E07-AC70";
       fsType = "vfat";
     };
 
-  swapDevices = [ { label = "swap"; } ];
+  swapDevices =
+    [ { device = "/dev/disk/by-uuid/4eb80400-deb0-4a1c-9029-9628b98f6fad"; }
+    ];
 
   nix.maxJobs = lib.mkDefault 8;
   powerManagement.cpuFreqGovernor = lib.mkDefault "powersave";
