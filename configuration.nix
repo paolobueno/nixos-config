@@ -16,8 +16,36 @@
     ];
 
   # Use the systemd-boot EFI boot loader.
-  boot.loader.systemd-boot.enable = true;
-  boot.loader.efi.canTouchEfiVariables = true;
+	boot.loader = {
+		# systemd-boot.enable = true;
+		efi = {
+			canTouchEfiVariables = true;
+			# assuming /boot is the mount point of the  EFI partition in NixOS (as the installation section recommends).
+			efiSysMountPoint = "/boot";
+		};
+    grub = {
+      # despite what the configuration.nix manpage seems to indicate,
+      # as of release 17.09, setting device to "nodev" will still call
+      # `grub-install` if efiSupport is true
+      # (the devices list is not used by the EFI grub install,
+      # but must be set to some value in order to pass an assert in grub.nix)
+      devices = [ "nodev" ];
+      efiSupport = true;
+      enable = true;
+      # set $FS_UUID to the UUID of the EFI partition
+      extraEntries = ''
+        menuentry "Windows" {
+          insmod part_gpt
+          insmod fat
+          insmod search_fs_uuid
+          insmod chain
+          search --fs--uid --set=root $FS_UUID
+          chainloader /EFI/Microsoft/Boot/bootmgfw.efi
+        }
+      '';
+      version = 2;
+    };
+	};
 
   i18n = {
     consoleFont = "Lat2-Terminus16";
@@ -89,10 +117,10 @@
     initialPassword = "test";
     extraGroups = ["wheel" "networkmanager" "docker" "adbusers"];
     shell = pkgs.zsh;
-    packages = [
-      pkgs.steam
-      pkgs.steam-run
-    ];
+    # packages = [
+      # pkgs.steam
+      # pkgs.steam-run
+    # ];
   };
 
 
@@ -132,9 +160,9 @@
   environment.systemPackages = (import ./packages.nix pkgs);
   services = (import ./services.nix pkgs);
 
-  boot.extraModProbeConfig = ''
-    options ath10k_core skip_otp=y
-  '';
+  # boot.extraModProbeConfig = ''
+    # options ath10k_core skip_otp=y
+  # '';
 
   # This value determines the NixOS release with which your system is to be
   # compatible, in order to avoid breaking some software such as database

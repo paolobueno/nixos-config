@@ -2,13 +2,13 @@ pkgs : {
 
   neo4j.enable = false;
   ipfs.enable = false;
-  redis.enable = true;
-  teamviewer.enable = true;
-  mysql.enable = true;
-  couchdb.enable = true;
-  mongodb.enable = true;
+  redis.enable = false;
+  teamviewer.enable = false;
+  mysql.enable = false;
+  couchdb.enable = false;
+  mongodb.enable = false;
   postgresql.enable = false;
-  printing.enable = true;
+  printing.enable = false;
   illum.enable = true;
 
   compton.enable = true;

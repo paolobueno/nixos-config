@@ -18,12 +18,12 @@
     };
 
   fileSystems."/boot" =
-    { device = "/dev/disk/by-uuid/7E07-AC70";
+    { device = "/dev/disk/by-uuid/59EC-30D3";
       fsType = "vfat";
     };
 
   swapDevices =
-    [ { device = "/dev/disk/by-uuid/4eb80400-deb0-4a1c-9029-9628b98f6fad"; }
+    [ { device = "/dev/disk/by-uuid/71d73eca-31f5-474b-bf23-629c29695895"; }
     ];
 
   nix.maxJobs = lib.mkDefault 8;
