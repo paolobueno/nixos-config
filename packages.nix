@@ -53,6 +53,7 @@ pkgs : with pkgs; [
   nodejs-10_x
   docker
   nwjs
+  # electron # TODO: add libgtk dependency
 
   # terminal and utils
   tmux
@@ -61,6 +62,7 @@ pkgs : with pkgs; [
   htop
   jq
   pv
+  appimage-run
 
   # gtk theming
   lxappearance

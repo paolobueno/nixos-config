@@ -83,7 +83,7 @@
     enableCompletion = true;
     syntaxHighlighting = {
       enable = true;
-      highlighters = [ "main" "brackets" "pattern" "cursor" "root" "line" ];
+      highlighters = [ "main" "brackets" "pattern" ];
     };
     ohMyZsh.enable = true;
     ohMyZsh.plugins = ["git"];
@@ -122,7 +122,6 @@
       # pkgs.steam-run
     # ];
   };
-
 
   systemd.user.services.powertop = {
     enable = true;
