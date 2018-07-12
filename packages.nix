@@ -87,6 +87,7 @@ pkgs : with pkgs; [
   ncmpcpp
   primus
   spotify
+  franz
   # mudlet # TODO: Fix and update to 3.10
 
 ] ++ (with haskellPackages; [
