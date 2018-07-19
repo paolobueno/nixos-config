@@ -39,7 +39,7 @@
           insmod fat
           insmod search_fs_uuid
           insmod chain
-          search --fs--uid --set=root $FS_UUID
+          search --fs--uid --set=root 59EC-30D3
           chainloader /EFI/Microsoft/Boot/bootmgfw.efi
         }
       '';
