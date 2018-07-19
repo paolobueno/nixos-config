@@ -5,6 +5,8 @@ let
     name = "f";
     targetPkgs = pkgs: with pkgs; [
       nodejs-10_x
+      python
+
       stdenv.cc.cc
       alsaLib
       atk
