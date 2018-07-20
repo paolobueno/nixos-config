@@ -62,6 +62,7 @@ pkgs : with pkgs;
   htop
   jq
   pv
+  xclip
   appimage-run
 
   # gtk theming
