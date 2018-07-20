@@ -1,0 +1,60 @@
+pkgs : pkgs.buildFHSUserEnv {
+  name = "f";
+  targetPkgs = pkgs: with pkgs; [
+    nodejs-10_x
+    python
+
+    stdenv.cc.cc
+    alsaLib
+    atk
+    cairo
+    cups
+    dbus
+    expat
+    file
+    fontconfig
+    freetype
+    gnome3.gconf
+    gdb
+    gdk_pixbuf
+    git
+    glib
+    gtk2
+    gtk3
+    libcap
+    libgnome-keyring3
+    libgpgerror
+    libnotify
+    libsecret
+    libxml2
+    libxslt
+    netcat
+    nspr
+    nspr
+    nss
+    nss
+    pango
+    strace
+    systemd
+    udev
+    watch
+    wget
+    which
+    xorg.libX11
+    xorg.libxcb
+    xorg.libXcomposite
+    xorg.libXcursor
+    xorg.libXdamage
+    xorg.libXext
+    xorg.libXfixes
+    xorg.libXi
+    xorg.libxkbfile
+    xorg.libXrandr
+    xorg.libXrender
+    xorg.libXScrnSaver
+    xorg.libXtst
+    xorg.xcbutilkeysyms
+    zlib
+  ];
+  runScript = "$SHELL";
+}
