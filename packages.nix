@@ -54,6 +54,7 @@ pkgs : with pkgs;
   nodejs-10_x
   docker
   nwjs
+  wine
 
   # terminal and utils
   tmux
