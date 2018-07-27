@@ -9,14 +9,12 @@ pkgs : with pkgs;
   google-chrome       # Web browser
   curl                # Web client
   feh                 # Image viewer
-  firefox             # Web browser
   gcc                 # C compiler
   git                 # Source control system
   gitAndTools.hub     # github compiler
   gnome3.dconf        # GNome configuration module used by other gnome software
   gnumake             # Build tool
   gnupg               # Encryption toolset
-  gopass              # Password manager compatible with Pass
   gparted             # Disk drive manager
   jmtpfs              # Android Phone mounter
   linuxPackages.perf  # Linux performance tools such as `time`
@@ -24,17 +22,13 @@ pkgs : with pkgs;
   maim                # Takes screenshots
   imagemagick         # Image editing suite
   meld                # View differences between text files
-  nixops              # Devops tools by Nix
   nnn                 # File browser
-  pass                # Password manager
   psmisc              # Process management utilities
   slop                # Screen region selection tool
   tldr                # Linux command line cheat sheet
-  transmission        # Torrenting software
   tixati
   unzip               # Zip archive extractor
   usbutils            # USB device management utilities
-  vlc                 # Video player
   mpv                 # Video player
   wget                # Web client
   which               # Linux executable finder
@@ -53,8 +47,6 @@ pkgs : with pkgs;
   python
   nodejs-10_x
   docker
-  nwjs
-  wine
 
   # terminal and utils
   tmux
@@ -74,8 +66,6 @@ pkgs : with pkgs;
 
   # IDEs and devtools
   vscode
-  arduino
-  android-studio
   insomnia
   robo3t
 
@@ -86,18 +76,9 @@ pkgs : with pkgs;
 
   # extra, personal
   dropbox
-  ncmpcpp
-  primus
   spotify
   franz
-  # mudlet # TODO: Fix and update to 3.10
-] ++ (with haskellPackages; [
-  ghc                 # Haskell compiler
-]) ++ (with nodePackages; [
-  dat                 # Decentralized web client
-  node2nix            # Converts package.json to default.nix
+] ++ (with nodePackages; [
   yarn                # Alternative to npm
   eslint              # linter
-  bower               # legacy front end package manager
-  grunt-cli           # legacy task runner
 ])

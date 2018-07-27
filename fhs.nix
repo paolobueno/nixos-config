@@ -3,7 +3,6 @@ pkgs : pkgs.buildFHSUserEnv {
   targetPkgs = pkgs: with pkgs; [
     nodejs-10_x
     python
-    wine
 
     stdenv.cc.cc
     alsaLib

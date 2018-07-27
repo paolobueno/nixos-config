@@ -2,12 +2,12 @@ pkgs : {
 
   neo4j.enable = false;
   ipfs.enable = false;
-  redis.enable = true;
+  redis.enable = false;
   teamviewer.enable = false;
   mysql.enable = true;
   couchdb.enable = true;
   mongodb.enable = true;
-  postgresql.enable = true;
+  postgresql.enable = false;
   printing.enable = false;
   illum.enable = true;
 
@@ -34,13 +34,7 @@ pkgs : {
     xkbVariant = ",";
     xkbOptions = "grp:toggle";
 
-    videoDrivers = [ "nvidia" "intel" ];
-
-    desktopManager = {
-      xterm.enable = false;
-      xfce.enable = false;
-      default = "none";
-    };
+    videoDrivers = [ "intel" ];
 
     displayManager = {
       slim.enable = true;
