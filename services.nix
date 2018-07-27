@@ -1,17 +1,16 @@
 pkgs : {
-
   neo4j.enable = false;
   ipfs.enable = false;
   redis.enable = false;
   teamviewer.enable = false;
   mysql.enable = true;
-  couchdb.enable = true;
-  mongodb.enable = true;
+  couchdb.enable = false;
+  mongodb.enable = false;
   postgresql.enable = false;
   printing.enable = false;
   illum.enable = true;
 
-  compton.enable = true;
+  compton.enable = false;
   # compton.backend = "glx";
 
   mysql.package = pkgs.mysql;
@@ -34,8 +33,12 @@ pkgs : {
     xkbVariant = ",";
     xkbOptions = "grp:toggle";
 
-    videoDrivers = [ "intel" ];
-    desktopManager.default = "none";
+    videoDrivers = [ "nvidia" "intel" ];
+    desktopManager = {
+      xterm.enable = false;
+      xfce.enable = false;
+      default = "none";
+    };
 
     displayManager = {
       slim.enable = true;
