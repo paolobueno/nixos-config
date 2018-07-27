@@ -25,21 +25,6 @@ pkgs : {
     host = "0.0.0.0";
   };
 
-  mopidy = {
-    enable = false;
-    configuration = ''
-[mpd]
-hostname = ::
-
-[spotify]
-username = paolohaji@gmail.com
-password = yugidlk77
-client_id = 1b4d3af3-858f-473d-8403-ac3f5eb2a5c0
-client_secret = _AcX5r-LZbY2P2shnrKVeo1WfsVUVdHsZcX24q-s-g4=
-'';
-    extensionPackages = [ pkgs.mopidy-spotify ];
-  };
-
   xserver = {
     enable = true;
     enableTCP = false;
