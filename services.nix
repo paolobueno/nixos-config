@@ -35,6 +35,7 @@ pkgs : {
     xkbOptions = "grp:toggle";
 
     videoDrivers = [ "intel" ];
+    desktopManager.default = "none";
 
     displayManager = {
       slim.enable = true;

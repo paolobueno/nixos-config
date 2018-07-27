@@ -46,6 +46,7 @@
       version = 2;
     };
   };
+  boot.blacklistedKernelModules = [ "nvidia" ];
 
   i18n = {
     consoleFont = "Lat2-Terminus16";
