@@ -57,13 +57,7 @@
   time.timeZone = "Europe/Amsterdam";
 
   sound.enable = true;
-  hardware.bluetooth = {
-    enable = true;
-    extraConfig = "
-      [General]
-      Enable=Source,Sink,Media,Socket
-    ";
-  };
+  hardware.bluetooth.enable = true;
 
   hardware.pulseaudio = {
     enable = true;
