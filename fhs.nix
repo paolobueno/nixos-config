@@ -14,11 +14,11 @@ pkgs : pkgs.buildFHSUserEnv {
     file
     fontconfig
     freetype
-    gnome3.gconf
     gdb
     gdk_pixbuf
     git
     glib
+    gnome2.GConf
     gtk2
     gtk3
     libcap
