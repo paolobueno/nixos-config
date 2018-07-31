@@ -41,8 +41,7 @@ pkgs : {
     };
 
     displayManager = {
-      slim.enable = true;
-      slim.defaultUser = "paolo";
+      lightdm.enable = true;
       sessionCommands = ''
         ${pkgs.xlibs.xset}/bin/xset r rate 230 65
         ${pkgs.xlibs.xsetroot}/bin/xsetroot -cursor_name left_ptr
