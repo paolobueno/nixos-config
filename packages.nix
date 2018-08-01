@@ -11,7 +11,7 @@ pkgs : with pkgs;
   feh                 # Image viewer
   gcc                 # C compiler
   git                 # Source control system
-  gitAndTools.hub     # github compiler
+  gitAndTools.hub     # GitHub client, wrapper around `git`
   gnome3.dconf        # GNome configuration module used by other gnome software
   gnumake             # Build tool
   gnupg               # Encryption toolset
@@ -26,37 +26,37 @@ pkgs : with pkgs;
   psmisc              # Process management utilities
   slop                # Screen region selection tool
   tldr                # Linux command line cheat sheet
-  tixati
+  tixati              # Torrent client
   unzip               # Zip archive extractor
   usbutils            # USB device management utilities
   mpv                 # Video player
   wget                # Web client
   which               # Linux executable finder
-  xdo                 # X Server client
-  xorg.xev
-  xorg.xf86videointel
+  xorg.xev            # List X events
   xsel                # Clipboard manager
   zip                 # Zip archive creator
   pciutils
   openconnect         # cisco vpn
   vpnc                # another cisco vpn client
-  ntfs3g
+  ntfs3g              # ntfs mount/format support
+  s-tui               # cpu governor monitor and stress test runner
+  stress              # stress runner, optional dep for s-tui
+  tmux                # terminal multiplexer
+  st                  # terminal emulator, config through C header files
+  rxvt_unicode        # terminal emulator
+  htop                # task manager
+  jq                  # sed for json
+  pv                  # monitor pipe progress
+  xclip               # clipboard util
+  appimage-run        # FHS script for AppImages
+  blueman             # bluetooth suite
+  xorg.xkill          # kill a process by it's X window
 
   # runtimes
   ruby
   python
   nodejs-10_x
   docker
-
-  # terminal and utils
-  tmux
-  st
-  rxvt_unicode
-  htop
-  jq
-  pv
-  xclip
-  appimage-run
 
   # gtk theming
   lxappearance
@@ -69,10 +69,9 @@ pkgs : with pkgs;
   insomnia
   robo3t
 
-  # gui applets
-  networkmanagerapplet
-  blueman
-  pavucontrol
+  # GUI applets
+  networkmanagerapplet # networkmanager front-end
+  pavucontrol          # pulseaudio GUI
 
   # extra, personal
   dropbox
