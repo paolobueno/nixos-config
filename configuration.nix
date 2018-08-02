@@ -71,8 +71,6 @@
   '';
   # hardware.enableAllFirmware = true;
 
-  # Some programs need SUID wrappers, can be configured further or are
-  # started in user sessions.
   programs.zsh = {
     enable = true;
     enableCompletion = true;
@@ -93,11 +91,6 @@
     hostName = "paolo-nixos";
   };
 
-  # Enable the X11 windowing system.
-  # services.xserver.enable = true;
-  # services.xserver.layout = "us";
-  # services.xserver.xkbOptions = "eurosign:e";
-
   fonts.enableDefaultFonts = true;
   fonts.fonts = with pkgs; [
     fira-code
@@ -112,10 +105,6 @@
     initialPassword = "test";
     extraGroups = ["wheel" "networkmanager" "docker" "adbusers"];
     shell = pkgs.zsh;
-    # packages = [
-      # pkgs.steam
-      # pkgs.steam-run
-    # ];
   };
 
   systemd.user.services.powertop = {
@@ -150,13 +139,16 @@
 
   virtualization.docker.enable = "true";
 
-  nixpkgs.config.allowUnfree = true;
+  nixpkgs.config = {
+    allowUnfree = true;
+    packageOverrides = pkgs: {
+      stable = import <stable> {
+        config = config.nixpkgs.config;
+      };
+    };
+  };
   environment.systemPackages = (import ./packages.nix pkgs);
   services = (import ./services.nix pkgs);
-
-  # boot.extraModProbeConfig = ''
-    # options ath10k_core skip_otp=y
-  # '';
 
   # This value determines the NixOS release with which your system is to be
   # compatible, in order to avoid breaking some software such as database

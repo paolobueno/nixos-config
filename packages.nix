@@ -1,5 +1,4 @@
 pkgs : with pkgs;
-
 [
   (import ./fhs.nix pkgs)
   (import ./vim.nix pkgs)
@@ -42,7 +41,7 @@ pkgs : with pkgs;
   s-tui               # cpu governor monitor and stress test runner
   stress              # stress runner, optional dep for s-tui
   tmux                # terminal multiplexer
-  st                  # terminal emulator, config through C header files
+  # st                  # terminal emulator, config through C header files
   rxvt_unicode        # terminal emulator
   htop                # task manager
   jq                  # sed for json
@@ -55,6 +54,8 @@ pkgs : with pkgs;
   # runtimes
   ruby
   python
+  stable.purescript
+  psc-package
   nodejs-10_x
   docker
 
@@ -80,4 +81,6 @@ pkgs : with pkgs;
 ] ++ (with nodePackages; [
   yarn                # Alternative to npm
   eslint              # linter
+]) ++ (with haskellPackages; [
+  ghc
 ])
