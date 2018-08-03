@@ -41,7 +41,7 @@ pkgs : with pkgs;
   s-tui               # cpu governor monitor and stress test runner
   stress              # stress runner, optional dep for s-tui
   tmux                # terminal multiplexer
-  # st                  # terminal emulator, config through C header files
+  xst                 # terminal emulator, fork of st
   rxvt_unicode        # terminal emulator
   htop                # task manager
   jq                  # sed for json

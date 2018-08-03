@@ -4,11 +4,6 @@
 
 { config, pkgs, pkgs_i686, ... }:
 
-# let
-  # # nvidia packages to use
-  # nvidia = config.boot.kernelPackages.nvidia_x11;
-  # nvidia32 = pkgs_i686.linuxPackages.nvidia_x11;
-# in
 {
   imports =
     [ # Include the results of the hardware scan.

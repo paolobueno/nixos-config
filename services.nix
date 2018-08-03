@@ -45,6 +45,7 @@ pkgs : {
       sessionCommands = ''
         ${pkgs.xlibs.xset}/bin/xset r rate 230 65
         ${pkgs.xlibs.xsetroot}/bin/xsetroot -cursor_name left_ptr
+        export TERMINAL=st
       '';
     };
 
@@ -55,6 +56,7 @@ pkgs : {
 
     libinput = {
       enable = true;
+      disableWhileTyping = true;
     };
   };
 }
