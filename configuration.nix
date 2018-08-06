@@ -42,6 +42,9 @@
     };
   };
   # boot.blacklistedKernelModules = [ "nvidia" ];
+  boot.kernelParams = [
+    ''"acpi_osi="!Windows 2015"''
+  ];
 
   i18n = {
     consoleFont = "Lat2-Terminus16";
@@ -119,10 +122,10 @@
     gc.automatic = true;
   };
 
-  # #NVIDIA
+  #NVIDIA
 
-  # hardware.bumblebee.enable = true;
-  # hardware.bumblebee.connectDisplay = true;
+  hardware.bumblebee.enable = true;
+  hardware.bumblebee.connectDisplay = true;
 
   hardware.opengl.driSupport32Bit = true;
 
