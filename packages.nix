@@ -40,9 +40,6 @@ pkgs : with pkgs;
   ntfs3g              # ntfs mount/format support
   s-tui               # cpu governor monitor and stress test runner
   stress              # stress runner, optional dep for s-tui
-  tmux                # terminal multiplexer
-  xst                 # terminal emulator, fork of st
-  rxvt_unicode        # terminal emulator
   htop                # task manager
   jq                  # sed for json
   pv                  # monitor pipe progress
@@ -50,6 +47,11 @@ pkgs : with pkgs;
   appimage-run        # FHS script for AppImages
   blueman             # bluetooth suite
   xorg.xkill          # kill a process by it's X window
+
+  # terminal stuff
+  tmux                # terminal multiplexer
+  xst                 # st + .Xdefaults
+  rxvt_unicode
 
   # runtimes
   ruby
