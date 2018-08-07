@@ -50,7 +50,7 @@ pkgs : with pkgs;
 
   # terminal stuff
   tmux                # terminal multiplexer
-  xst                 # st + .Xdefaults
+  st                  # st + .Xdefaults
   rxvt_unicode
 
   # runtimes

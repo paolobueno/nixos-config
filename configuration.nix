@@ -148,6 +148,14 @@
       stable = import <stable> {
         config = config.nixpkgs.config;
       };
+      st = pkgs.st.override {
+        conf = builtins.readFile ./st/config.def.h;
+        patches = [
+          ./st/st-clipboard-0.8.1.diff
+          ./st/st-scrollback-0.8.diff
+          # ./st/st-xresources-20180309-c5ba9c0.diff
+        ];
+      };
     };
   };
   environment.systemPackages = (import ./packages.nix pkgs);
