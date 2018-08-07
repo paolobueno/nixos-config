@@ -50,7 +50,14 @@ pkgs : with pkgs;
 
   # terminal stuff
   tmux                # terminal multiplexer
-  st                  # st + .Xdefaults
+  (st.override {
+    conf = builtins.readFile ./st/config.def.h;
+    patches = [
+      ./st/st-clipboard-0.8.1.diff
+      ./st/st-scrollback-0.8.diff
+      # ./st/st-xresources-20180309-c5ba9c0.diff
+    ];
+  })
   rxvt_unicode
 
   # runtimes
