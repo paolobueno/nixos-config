@@ -59,6 +59,7 @@ pkgs : with pkgs;
     ];
   })
   rxvt_unicode
+  # alacritty         # GPU acellerated emulator
 
   # runtimes
   ruby
