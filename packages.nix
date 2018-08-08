@@ -87,7 +87,17 @@ pkgs : with pkgs;
   # extra, personal
   dropbox
   spotify
-  franz
+  #(let
+      #version = "5.0.0-beta.18";
+    #in
+    #franz.overrideAttrs (oldAttrs: rec {
+      #name = "franz-${version}";
+      #src = fetchurl {
+        #url = "https://github.com/meetfranz/franz/releases/download/v${version}/franz-${version}.tar.gz";
+        #sha256 = "96090ae3722f43c2f03ea9412edaf1436a25fc19bbccf30ab1f0fe494ec01825";
+      #};
+    #})
+  #)
 ] ++ (with nodePackages; [
   yarn                # Alternative to npm
   eslint              # linter
