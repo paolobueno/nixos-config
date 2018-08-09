@@ -6,10 +6,10 @@ index 82b1b09..27d42ca 100644
  	{ TERMMOD,              XK_Y,           selpaste,       {.i =  0} },
  	{ TERMMOD,              XK_Num_Lock,    numlock,        {.i =  0} },
  	{ TERMMOD,              XK_I,           iso14755,       {.i =  0} },
-+	{ ShiftMask,            XK_Page_Up,     kscrollup,      {.i = -1} },
-+	{ ShiftMask,            XK_Page_Down,   kscrolldown,    {.i = -1} },
++	{ TERMMOD,              XK_Page_Up,     kscrollup,      {.i = -1} },
++	{ TERMMOD,              XK_Page_Down,   kscrolldown,    {.i = -1} },
  };
- 
+
  /*
 diff --git a/st.c b/st.c
 index 65a0cb6..1d8c12a 100644
@@ -39,15 +39,15 @@ index 65a0cb6..1d8c12a 100644
 @@ -431,10 +434,10 @@ tlinelen(int y)
  {
  	int i = term.col;
- 
+
 -	if (term.line[y][i - 1].mode & ATTR_WRAP)
 +	if (TLINE(y)[i - 1].mode & ATTR_WRAP)
  		return i;
- 
+
 -	while (i > 0 && term.line[y][i - 1].u == ' ')
 +	while (i > 0 && TLINE(y)[i - 1].u == ' ')
  		--i;
- 
+
  	return i;
 @@ -543,7 +546,7 @@ selsnap(int *x, int *y, int direction)
  		 * Snap around if the word wraps around at the end or
@@ -66,10 +66,10 @@ index 65a0cb6..1d8c12a 100644
 +				if (!(TLINE(yt)[xt].mode & ATTR_WRAP))
  					break;
  			}
- 
+
  			if (newx >= tlinelen(newy))
  				break;
- 
+
 -			gp = &term.line[newy][newx];
 +			gp = &TLINE(newy)[newx];
  			delim = ISDELIM(gp->u);
@@ -94,7 +94,7 @@ index 65a0cb6..1d8c12a 100644
  				}
 @@ -624,13 +627,13 @@ getsel(void)
  		}
- 
+
  		if (sel.type == SEL_RECTANGULAR) {
 -			gp = &term.line[y][sel.nb.x];
 +			gp = &TLINE(y)[sel.nb.x];
@@ -108,17 +108,17 @@ index 65a0cb6..1d8c12a 100644
 +		last = &TLINE(y)[MIN(lastx, linelen-1)];
  		while (last >= gp && last->u == ' ')
  			--last;
- 
+
 @@ -836,6 +839,9 @@ ttyread(void)
  	if (buflen > 0)
  		memmove(buf, buf + written, buflen);
- 
+
 +	if (term.scr > 0 && term.scr < HISTSIZE-1)
 +		term.scr++;
 +
  	return ret;
  }
- 
+
 @@ -843,6 +849,9 @@ void
  ttywrite(const char *s, size_t n, int may_echo)
  {
@@ -126,12 +126,12 @@ index 65a0cb6..1d8c12a 100644
 +	Arg arg = (Arg) { .i = term.scr };
 +
 +	kscrolldown(&arg);
- 
+
  	if (may_echo && IS_SET(MODE_ECHO))
  		twrite(s, n, 1);
 @@ -1054,13 +1063,54 @@ tswapscreen(void)
  }
- 
+
  void
 -tscrolldown(int orig, int n)
 +kscrolldown(const Arg* a)
@@ -172,9 +172,9 @@ index 65a0cb6..1d8c12a 100644
  {
  	int i;
  	Line temp;
- 
+
  	LIMIT(n, 0, term.bot-orig+1);
- 
+
 +	if (copyhist) {
 +		term.histi = (term.histi - 1 + HISTSIZE) % HISTSIZE;
 +		temp = term.hist[term.histi];
@@ -184,19 +184,19 @@ index 65a0cb6..1d8c12a 100644
 +
  	tsetdirt(orig, term.bot-n);
  	tclearregion(0, term.bot-n+1, term.col-1, term.bot);
- 
+
 @@ -1074,13 +1124,20 @@ tscrolldown(int orig, int n)
  }
- 
+
  void
 -tscrollup(int orig, int n)
 +tscrollup(int orig, int n, int copyhist)
  {
  	int i;
  	Line temp;
- 
+
  	LIMIT(n, 0, term.bot-orig+1);
- 
+
 +	if (copyhist) {
 +		term.histi = (term.histi + 1) % HISTSIZE;
 +		temp = term.hist[term.histi];
@@ -206,10 +206,10 @@ index 65a0cb6..1d8c12a 100644
 +
  	tclearregion(0, orig, term.col-1, orig+n-1);
  	tsetdirt(orig+n, term.bot);
- 
+
 @@ -1129,7 +1186,7 @@ tnewline(int first_col)
  	int y = term.c.y;
- 
+
  	if (y == term.bot) {
 -		tscrollup(term.top, 1);
 +		tscrollup(term.top, 1, 1);
@@ -223,7 +223,7 @@ index 65a0cb6..1d8c12a 100644
 -		tscrolldown(term.c.y, n);
 +		tscrolldown(term.c.y, n, 0);
  }
- 
+
  void
  tdeleteline(int n)
  {
@@ -231,7 +231,7 @@ index 65a0cb6..1d8c12a 100644
 -		tscrollup(term.c.y, n);
 +		tscrollup(term.c.y, n, 0);
  }
- 
+
  int32_t
 @@ -1730,11 +1787,11 @@ csihandle(void)
  		break;
@@ -277,7 +277,7 @@ index 65a0cb6..1d8c12a 100644
 @@ -2527,7 +2584,15 @@ tresize(int col, int row)
  	term.dirty = xrealloc(term.dirty, row * sizeof(*term.dirty));
  	term.tabs = xrealloc(term.tabs, col * sizeof(*term.tabs));
- 
+
 -	/* resize each row to new width, zero-pad if needed */
 +	for (i = 0; i < HISTSIZE; i++) {
 +		term.hist[i] = xrealloc(term.hist[i], col * sizeof(Glyph));
@@ -293,16 +293,16 @@ index 65a0cb6..1d8c12a 100644
  		term.alt[i]  = xrealloc(term.alt[i],  col * sizeof(Glyph));
 @@ -2584,7 +2649,7 @@ drawregion(int x1, int y1, int x2, int y2)
  			continue;
- 
+
  		term.dirty[y] = 0;
 -		xdrawline(term.line[y], x1, y, x2);
 +		xdrawline(TLINE(y), x1, y, x2);
  	}
  }
- 
+
 @@ -2605,8 +2670,10 @@ draw(void)
  		cx--;
- 
+
  	drawregion(0, 0, term.col, term.row);
 -	xdrawcursor(cx, term.c.y, term.line[term.c.y][cx],
 -			term.ocx, term.ocy, term.line[term.ocy][term.ocx]);
@@ -320,7 +320,7 @@ index dac64d8..628e876 100644
 @@ -3,6 +3,9 @@
  #include <stdint.h>
  #include <sys/types.h>
- 
+
 +/* Arbitrary size */
 +#define HISTSIZE      2000
 +
@@ -328,18 +328,18 @@ index dac64d8..628e876 100644
  #define MIN(a, b)		((a) < (b) ? (a) : (b))
  #define MAX(a, b)		((a) < (b) ? (b) : (a))
 @@ -19,6 +22,8 @@
- 
+
  #define TRUECOLOR(r,g,b)	(1 << 24 | (r) << 16 | (g) << 8 | (b))
  #define IS_TRUECOL(x)		(1 << 24 & (x))
 +#define TLINE(y)       ((y) < term.scr ? term.hist[((y) + term.histi - term.scr \
 +               + HISTSIZE + 1) % HISTSIZE] : term.line[(y) - term.scr])
- 
+
  enum glyph_attribute {
  	ATTR_NULL       = 0,
 @@ -111,6 +116,9 @@ void *xmalloc(size_t);
  void *xrealloc(void *, size_t);
  char *xstrdup(char *);
- 
+
 +void kscrolldown(const Arg *);
 +void kscrollup(const Arg *);
 +

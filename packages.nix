@@ -52,11 +52,13 @@ pkgs : with pkgs;
   # terminal stuff
   tmux                # terminal multiplexer
   (st.override {
-    conf = builtins.readFile ./st/config.def.h;
+    # conf = builtins.readFile ./st/config.def.h;
     patches = [
+      ./st/font.diff
+      ./st/dracula.diff
+      ./st/st-fix-keyboard-input-20180605-dc3b5ba.diff
       ./st/st-clipboard-0.8.1.diff
       ./st/st-scrollback-0.8.diff
-      # ./st/st-xresources-20180309-c5ba9c0.diff
     ];
   })
   rxvt_unicode
