@@ -13,6 +13,8 @@ pkgs : {
   compton.enable = false;
   # compton.backend = "glx";
 
+  openssh.enable = true;
+
   mysql.package = pkgs.mysql;
   couchdb.package = pkgs.couchdb2;
   postgresql.package = pkgs.postgresql;

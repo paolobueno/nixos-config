@@ -59,10 +59,11 @@
     ohMyZsh.theme = "agnoster";
   };
   programs.adb.enable = true;
+  programs.mosh.enable = true;
 
   networking = {
     firewall.enable = true;
-    firewall.allowedTCPPorts = [3000 9418 8000 8080];
+    firewall.allowedTCPPorts = [22 3000 9418 8000 8080];
     firewall.allowedTCPPortRanges = [
       {from = 19000; to=19100;}
     ];
