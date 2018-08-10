@@ -47,7 +47,8 @@ pkgs : with pkgs;
   appimage-run        # FHS script for AppImages
   blueman             # bluetooth suite
   xorg.xkill          # kill a process by it's X window
-  pmutils
+  pmutils             # pm-hibernate and other utils
+  moreutils           # `sponge` and others
 
   # terminal stuff
   tmux                # terminal multiplexer
