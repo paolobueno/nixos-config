@@ -86,6 +86,7 @@ pkgs : with pkgs;
   # GUI applets
   networkmanagerapplet # networkmanager front-end
   pavucontrol          # pulseaudio GUI
+  lightlocker          # lightdm screenlock
 
   # extra, personal
   dropbox
