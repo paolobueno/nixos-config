@@ -49,6 +49,7 @@ pkgs : with pkgs;
   xorg.xkill          # kill a process by it's X window
   pmutils             # pm-hibernate and other utils
   moreutils           # `sponge` and others
+  libcaca             # render bitmaps as text
 
   # terminal stuff
   tmux                # terminal multiplexer
