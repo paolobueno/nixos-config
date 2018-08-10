@@ -56,11 +56,10 @@ pkgs : with pkgs;
   (st.override {
     # conf = builtins.readFile ./st/config.def.h;
     patches = [
+      ./st/st-scrollback-0.8.diff
       ./st/font.diff
       ./st/dracula.diff
       ./st/st-fix-keyboard-input-20180605-dc3b5ba.diff
-      ./st/st-clipboard-0.8.1.diff
-      ./st/st-scrollback-0.8.diff
     ];
   })
   rxvt_unicode
