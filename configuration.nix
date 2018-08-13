@@ -60,6 +60,9 @@
   };
   programs.adb.enable = true;
   programs.mosh.enable = true;
+  programs.ssh = {
+    startAgent = true;
+  };
 
   networking = {
     firewall.enable = true;
