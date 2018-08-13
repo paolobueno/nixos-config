@@ -19,25 +19,9 @@
       efiSysMountPoint = "/boot";
     };
     grub = {
-      # despite what the configuration.nix manpage seems to indicate,
-      # as of release 17.09, setting device to "nodev" will still call
-      # `grub-install` if efiSupport is true
-      # (the devices list is not used by the EFI grub install,
-      # but must be set to some value in order to pass an assert in grub.nix)
       devices = [ "nodev" ];
       efiSupport = true;
       enable = true;
-      # set $FS_UUID to the UUID of the EFI partition
-      extraEntries = ''
-        menuentry "Windows" {
-          insmod part_gpt
-          insmod fat
-          insmod search_fs_uuid
-          insmod chain
-          search --fs--uid --set=root 59EC-30D3
-          chainloader /EFI/Microsoft/Boot/bootmgfw.efi
-        }
-      '';
       version = 2;
     };
   };
@@ -84,6 +68,7 @@
   programs.mosh.enable = true;
   programs.ssh = {
     startAgent = true;
+    agentTimeout = "8h";
   };
 
   networking = {
