@@ -50,6 +50,7 @@ pkgs : with pkgs;
   pmutils             # pm-hibernate and other utils
   moreutils           # `sponge` and others
   libcaca             # render bitmaps as text
+  awscli
 
   # terminal stuff
   tmux                # terminal multiplexer
