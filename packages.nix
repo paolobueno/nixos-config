@@ -93,6 +93,7 @@ pkgs : with pkgs;
   # extra, personal
   dropbox
   spotify
+  crawl
   #(let
       #version = "5.0.0-beta.18";
     #in
