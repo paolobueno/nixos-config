@@ -25,10 +25,6 @@
       version = 2;
     };
   };
-  # boot.blacklistedKernelModules = [ "nvidia" ];
-  # boot.kernelParams = [
-    # ''"acpi_osi="!Windows 2015"''
-  # ];
 
   i18n = {
     consoleFont = "Lat2-Terminus16";
@@ -121,16 +117,16 @@
 
   #NVIDIA
 
-  # hardware.bumblebee.enable = true;
-  # hardware.bumblebee.connectDisplay = true;
+  hardware.bumblebee.enable = true;
+  hardware.bumblebee.connectDisplay = true;
 
-  # hardware.opengl.driSupport32Bit = true;
+  hardware.opengl.driSupport32Bit = true;
 
-  # disable card with bbswitch by default
-  # hardware.nvidiaOptimus.disable = true;
-  # install nvidia drivers in addition to intel one
-  # hardware.opengl.extraPackages = [ nvidia.out ];
-  # hardware.opengl.extraPackages32 = [ nvidia32.out ];
+  # https://bbs.archlinux.org/viewtopic.php?id=223056
+  boot.kernelParams = [
+    ''acpi_rev_override=5''
+    # ''acpi_osi=! acpi_osi="Windows 2009"''
+  ];
 
   virtualization.docker.enable = "true";
 
@@ -142,13 +138,10 @@
       };
     };
   };
+
   environment.systemPackages = (import ./packages.nix pkgs);
   services = (import ./services.nix pkgs);
 
-  # This value determines the NixOS release with which your system is to be
-  # compatible, in order to avoid breaking some software such as database
-  # servers. You should change this only after NixOS release notes say you
-  # should.
-  system.stateVersion = "18.03"; # Did you read the comment?
+  system.stateVersion = "18.03";
 }
 
