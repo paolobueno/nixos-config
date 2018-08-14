@@ -51,6 +51,7 @@ pkgs : with pkgs;
   moreutils           # `sponge` and others
   libcaca             # render bitmaps as text
   awscli
+  dmidecode
 
   # terminal stuff
   tmux                # terminal multiplexer
