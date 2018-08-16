@@ -10,7 +10,7 @@ pkgs : {
   printing.enable = false;
   illum.enable = true;
 
-  compton.enable = false;
+  compton.enable = true;
   # compton.backend = "glx";
 
   openssh.enable = true;
