@@ -52,6 +52,7 @@ pkgs : with pkgs;
   libcaca             # render bitmaps as text
   awscli
   dmidecode
+  glxinfo
 
   # terminal stuff
   tmux                # terminal multiplexer
