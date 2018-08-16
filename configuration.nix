@@ -64,7 +64,6 @@
   programs.mosh.enable = true;
   programs.ssh = {
     startAgent = true;
-    agentTimeout = "8h";
   };
 
   networking = {
@@ -98,17 +97,6 @@
     shell = pkgs.zsh;
   };
 
-  systemd.user.services.powertop = {
-    enable = true;
-    description = "powertop autotune service";
-    wantedBy = [ "multi-user.target" ];
-    path = with pkgs; [ powertop ];
-    serviceConfig = {
-      ExecStart = "${pkgs.powertop}/bin/powertop --auto-tune";
-      Type = "oneshot";
-    };
-  };
-
   nix = {
     autoOptimiseStore = true;
     buildCores = 4;
@@ -128,7 +116,12 @@
     # ''acpi_osi=! acpi_osi="Windows 2009"''
   ];
 
-  virtualization.docker.enable = "true";
+  virtualization.docker.enable = true;
+
+  powerManagement = {
+    enable = true;
+    powertop.enable = true;
+  };
 
   nixpkgs.config = {
     allowUnfree = true;
