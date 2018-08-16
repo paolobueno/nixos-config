@@ -54,6 +54,7 @@ pkgs : with pkgs;
   dmidecode
   glxinfo
   acpi
+  pandoc
 
   # terminal stuff
   tmux                # terminal multiplexer
