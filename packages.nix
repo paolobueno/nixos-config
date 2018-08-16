@@ -53,6 +53,7 @@ pkgs : with pkgs;
   awscli
   dmidecode
   glxinfo
+  acpi
 
   # terminal stuff
   tmux                # terminal multiplexer

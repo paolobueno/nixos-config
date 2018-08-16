@@ -12,6 +12,12 @@ pkgs : {
 
   compton.enable = true;
   # compton.backend = "glx";
+  tlp = {
+    enable = true;
+    extraConfig = ''
+      RUNTIME_PM_BLACKLIST="01:00.0"
+    '';
+  };
 
   openssh.enable = true;
 
@@ -35,7 +41,7 @@ pkgs : {
     xkbVariant = ",";
     xkbOptions = "grp:toggle";
 
-    videoDrivers = [ "nvidia" "intel" ];
+    videoDrivers = [ "intel" ];
     desktopManager = {
       xterm.enable = false;
       xfce.enable = false;

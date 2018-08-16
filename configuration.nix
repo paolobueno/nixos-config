@@ -107,24 +107,25 @@
 
   hardware.bumblebee.enable = true;
   hardware.bumblebee.driver = "nvidia";
+  hardware.bumblebee.pmMethod = "bbswitch";
   hardware.bumblebee.connectDisplay = true;
   # hardware.nvidiaOptimus.disable = true;
   # hardware.opengl.extraPackages = [ pkgs.linuxPackages.nvidia_x11.out ];
   # hardware.opengl.extraPackages32 = [ pkgs_i686.linuxPackages.nvidia_x11.out ];
 
-  hardware.opengl.driSupport32Bit = true;
+  # hardware.opengl.driSupport32Bit = true;
 
   # https://bbs.archlinux.org/viewtopic.php?id=223056
   boot.kernelParams = [
     ''acpi_rev_override=5''
     # ''acpi_osi=! acpi_osi="Windows 2009"''
+    # ''pcie_port_pm=off''
   ];
 
   virtualization.docker.enable = true;
 
   powerManagement = {
     enable = true;
-    powertop.enable = true;
   };
 
   nixpkgs.config = {
