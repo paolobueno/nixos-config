@@ -78,11 +78,14 @@ pkgs : with pkgs;
   nodejs-10_x
   docker
 
-  # gtk theming
+  # desktop
   lxappearance
   arc-icon-theme
   arc-theme
   moka-icon-theme
+  xautolock
+  i3lock
+  libnotify
 
   # IDEs and devtools
   vscode
@@ -92,7 +95,6 @@ pkgs : with pkgs;
   # GUI applets
   networkmanagerapplet # networkmanager front-end
   pavucontrol          # pulseaudio GUI
-  lightlocker          # lightdm screenlock
 
   # extra, personal
   dropbox

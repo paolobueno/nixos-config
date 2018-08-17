@@ -62,6 +62,20 @@ pkgs : {
       default = "i3";
     };
 
+    xautolock = {
+      enable = true;
+      extraOptions = [ "-detectsleep" ];
+
+      time = 15; # default
+      locker = "${pkgs.i3lock}/bin/i3lock -c 282a36";
+      nowlocker = "${pkgs.i3lock}/bin/i3lock -c 282a36";
+
+      enableNotifier = true;
+      notifier = ''
+        ${pkgs.libnotify}/bin/notify-send "Locking in 10 seconds"
+      '';
+    };
+
     libinput = {
       enable = true;
       disableWhileTyping = true;
