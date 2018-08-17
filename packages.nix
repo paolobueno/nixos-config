@@ -55,6 +55,7 @@ pkgs : with pkgs;
   glxinfo
   acpi
   pandoc
+  rename
 
   # terminal stuff
   tmux                # terminal multiplexer
@@ -91,6 +92,7 @@ pkgs : with pkgs;
   vscode
   insomnia
   robo3t
+  libreoffice
 
   # GUI applets
   networkmanagerapplet # networkmanager front-end
