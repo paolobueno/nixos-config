@@ -95,6 +95,7 @@ pkgs : with pkgs;
   # GUI applets
   networkmanagerapplet # networkmanager front-end
   pavucontrol          # pulseaudio GUI
+  pcmanfm
 
   # extra, personal
   dropbox
