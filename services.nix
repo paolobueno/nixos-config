@@ -67,8 +67,7 @@ pkgs : {
       extraOptions = [ "-detectsleep" ];
 
       time = 15; # default
-      locker = "${pkgs.i3lock}/bin/i3lock -c 282a36";
-      nowlocker = "${pkgs.i3lock}/bin/i3lock -c 282a36";
+      locker = "${pkgs.i3lock-color}/bin/i3lock-color -k -c 282a36";
 
       enableNotifier = true;
       notifier = ''

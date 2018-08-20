@@ -85,7 +85,7 @@ pkgs : with pkgs;
   arc-theme
   moka-icon-theme
   xautolock
-  i3lock
+  i3lock-color
   libnotify
 
   # IDEs and devtools
