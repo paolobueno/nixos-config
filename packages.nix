@@ -54,6 +54,7 @@ pkgs : with pkgs;
   dmidecode
   glxinfo
   acpi
+  lm_sensors
   pandoc
   rename
 
