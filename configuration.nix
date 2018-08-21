@@ -87,6 +87,7 @@
     noto-fonts-emoji
     emojione
     symbola
+    font-awesome_5
   ];
 
   users.users.paolo = {

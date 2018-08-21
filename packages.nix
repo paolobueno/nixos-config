@@ -86,6 +86,7 @@ pkgs : with pkgs;
   moka-icon-theme
   xautolock
   i3lock-color
+  i3status-rust
   libnotify
 
   # IDEs and devtools
