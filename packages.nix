@@ -81,6 +81,7 @@ pkgs : with pkgs;
   psc-package
   nodejs-10_x
   docker
+  androidsdk
 
   # desktop
   lxappearance
