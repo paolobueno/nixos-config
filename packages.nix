@@ -75,6 +75,7 @@ pkgs : with pkgs;
   # runtimes
   ruby
   python
+  rustup
   stable.purescript
   psc-package
   nodejs-10_x
