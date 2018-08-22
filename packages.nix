@@ -57,6 +57,7 @@ pkgs : with pkgs;
   lm_sensors
   pandoc
   rename
+  python27Packages.pygments
 
   # terminal stuff
   tmux                # terminal multiplexer
