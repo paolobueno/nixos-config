@@ -8,6 +8,9 @@ pkgs : with pkgs;
   google-chrome       # Web browser
   curl                # Web client
   feh                 # Image viewer
+  nomacs              # Image viewer
+  krita
+  inkscape
   gcc                 # C compiler
   git                 # Source control system
   gitAndTools.hub     # GitHub client, wrapper around `git`
@@ -105,7 +108,7 @@ pkgs : with pkgs;
   pcmanfm
 
   # extra, personal
-  dropbox
+  stable.dropbox
   spotify
   crawl
   #(let
