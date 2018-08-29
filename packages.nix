@@ -9,8 +9,6 @@ pkgs : with pkgs;
   curl                # Web client
   feh                 # Image viewer
   nomacs              # Image viewer
-  krita
-  inkscape
   gcc                 # C compiler
   git                 # Source control system
   gitAndTools.hub     # GitHub client, wrapper around `git`
@@ -101,6 +99,8 @@ pkgs : with pkgs;
   insomnia
   robo3t
   libreoffice
+  krita
+  pencil
 
   # GUI applets
   networkmanagerapplet # networkmanager front-end
