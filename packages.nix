@@ -101,6 +101,7 @@ pkgs : with pkgs;
   libreoffice
   krita
   pencil
+  android-studio
 
   # GUI applets
   networkmanagerapplet # networkmanager front-end
@@ -111,6 +112,7 @@ pkgs : with pkgs;
   stable.dropbox
   spotify
   crawl
+  openttd
   #(let
       #version = "5.0.0-beta.18";
     #in
