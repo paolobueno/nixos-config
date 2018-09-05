@@ -6,6 +6,7 @@ pkgs : with pkgs;
   bashmount           # Mount USB storage
   bind                # DNS utilities
   google-chrome       # Web browser
+  chromium
   curl                # Web client
   feh                 # Image viewer
   nomacs              # Image viewer
