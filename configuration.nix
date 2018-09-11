@@ -123,7 +123,7 @@
     # ''pcie_port_pm=off''
   ];
 
-  virtualization.docker.enable = true;
+  virtualisation.docker.enable = true;
 
   powerManagement = {
     enable = true;
