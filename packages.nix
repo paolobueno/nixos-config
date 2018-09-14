@@ -60,6 +60,7 @@ pkgs : with pkgs;
   pandoc
   rename
   python27Packages.pygments
+  skype
 
   # terminal stuff
   tmux                # terminal multiplexer

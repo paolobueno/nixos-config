@@ -62,6 +62,7 @@
   };
   programs.adb.enable = true;
   programs.mosh.enable = true;
+  programs.java.enable = true;
   programs.ssh = {
     startAgent = true;
   };
