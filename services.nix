@@ -7,7 +7,7 @@ pkgs : {
   couchdb.enable = false;
   mongodb.enable = false;
   postgresql.enable = false;
-  printing.enable = false;
+  printing.enable = true;
   illum.enable = true;
 
   compton.enable = true;
@@ -26,6 +26,12 @@ pkgs : {
   postgresql.package = pkgs.postgresql;
   postgresql.authentication = "host all all 127.0.0.1/32 trust";
   printing.drivers = [ pkgs.hplip pkgs.gutenprint ];
+  printing.browsing = true;
+
+  avahi.enable = true;
+  avahi.publish.enable = true;
+  avahi.publish.userServices = true;
+  avahi.nssmdns = true;
 
   mosquitto = {
     enable = false;
