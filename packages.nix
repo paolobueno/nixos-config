@@ -84,7 +84,6 @@ pkgs : with pkgs;
   psc-package
   nodejs-10_x
   docker
-  androidsdk
 
   # desktop
   lxappearance
@@ -103,7 +102,6 @@ pkgs : with pkgs;
   libreoffice
   krita
   pencil
-  android-studio
 
   # GUI applets
   networkmanagerapplet # networkmanager front-end

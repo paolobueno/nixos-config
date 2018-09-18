@@ -54,6 +54,8 @@ pkgs : pkgs.buildFHSUserEnv {
     xorg.libXScrnSaver
     xorg.libXtst
     xorg.xcbutilkeysyms
+    libGL
+    libpulseaudio
     zlib
   ];
   runScript = "$SHELL";
