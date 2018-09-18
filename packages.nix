@@ -1,6 +1,6 @@
 pkgs : with pkgs;
 [
-  (import ./fhs.nix pkgs)
+  (callPackage ./fhs.nix {})
   (import ./vim.nix pkgs)
   arandr              # Screen control
   bashmount           # Mount USB storage

@@ -1,4 +1,4 @@
-pkgs : pkgs.buildFHSUserEnv {
+{pkgs, pkgsi686Linux} : pkgs.buildFHSUserEnv {
   name = "f";
   targetPkgs = pkgs: with pkgs; [
     nodejs-10_x
@@ -57,6 +57,7 @@ pkgs : pkgs.buildFHSUserEnv {
     libGL
     libpulseaudio
     zlib
+    pkgsi686Linux.zlib
   ];
   runScript = "$SHELL";
 }
