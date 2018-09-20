@@ -102,6 +102,7 @@ pkgs : with pkgs;
   libreoffice
   krita
   pencil
+  font-manager
 
   # GUI applets
   networkmanagerapplet # networkmanager front-end
