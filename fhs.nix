@@ -57,7 +57,6 @@
     libGL
     libpulseaudio
     zlib
-    pkgsi686Linux.zlib
   ];
   runScript = "$SHELL";
 }
