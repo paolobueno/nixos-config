@@ -61,6 +61,7 @@ pkgs : with pkgs;
   rename
   python27Packages.pygments
   skype
+  xorg.xbacklight
 
   # terminal stuff
   tmux                # terminal multiplexer
