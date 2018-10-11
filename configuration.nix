@@ -91,6 +91,7 @@
     font-awesome_5
   ];
 
+  environment.variables = { EDITOR = "vim"; };
   users.users.paolo = {
     isNormalUser = true;
     uid = 1000;

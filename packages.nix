@@ -104,6 +104,8 @@ pkgs : with pkgs;
   krita
   pencil
   font-manager
+  inkscape
+  fontforge-gtk
 
   # GUI applets
   networkmanagerapplet # networkmanager front-end
