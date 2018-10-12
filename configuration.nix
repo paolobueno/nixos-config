@@ -143,6 +143,6 @@
   environment.systemPackages = (import ./packages.nix pkgs);
   services = (import ./services.nix pkgs);
 
-  system.stateVersion = "18.03";
+  system.stateVersion = "18.09";
 }
 
