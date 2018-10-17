@@ -89,6 +89,7 @@
     emojione
     symbola
     font-awesome_5
+    iosevka-bin
   ];
 
   environment.variables = { EDITOR = "vim"; };
