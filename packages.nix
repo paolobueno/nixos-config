@@ -6,7 +6,6 @@ pkgs : with pkgs;
   bashmount           # Mount USB storage
   bind                # DNS utilities
   google-chrome       # Web browser
-  chromium
   curl                # Web client
   feh                 # Image viewer
   nomacs              # Image viewer
@@ -52,7 +51,7 @@ pkgs : with pkgs;
   pmutils             # pm-hibernate and other utils
   moreutils           # `sponge` and others
   libcaca             # render bitmaps as text
-  (wine.override { wineBuild = "wineWow"; })
+  # (wine.override { wineBuild = "wineWow"; })
   awscli
   dmidecode
   glxinfo
