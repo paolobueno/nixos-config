@@ -77,6 +77,7 @@
     networkmanager = {
       enable = true;
       enableStrongSwan = true;
+      packages = [ pkgs.networkmanager-openconnect ];
     };
     hostName = "paolo-nixos";
   };

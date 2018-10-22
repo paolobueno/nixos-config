@@ -63,6 +63,7 @@ pkgs : with pkgs;
   rename
   python27Packages.pygments
   xorg.xbacklight
+  strongswanNM
 
   # terminal stuff
   tmux                # terminal multiplexer
