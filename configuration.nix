@@ -48,6 +48,7 @@
     options ath10k_core skip_otp=y
   '';
   # hardware.enableAllFirmware = true;
+  hardware.opengl.extraPackages = [ pkgs.vaapiIntel ];
 
   programs.zsh = {
     enable = true;
@@ -73,7 +74,10 @@
     firewall.allowedTCPPortRanges = [
       {from = 19000; to=19100;}
     ];
-    networkmanager.enable = true;
+    networkmanager = {
+      enable = true;
+      enableStrongSwan = true;
+    };
     hostName = "paolo-nixos";
   };
 
