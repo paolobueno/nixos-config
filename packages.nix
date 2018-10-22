@@ -6,6 +6,7 @@ pkgs : with pkgs;
   bashmount           # Mount USB storage
   bind                # DNS utilities
   google-chrome       # Web browser
+  chromium
   curl                # Web client
   feh                 # Image viewer
   nomacs              # Image viewer
@@ -43,6 +44,7 @@ pkgs : with pkgs;
   stress              # stress runner, optional dep for s-tui
   htop                # task manager
   jq                  # sed for json
+  tree                # tree
   pv                  # monitor pipe progress
   xclip               # clipboard util
   appimage-run        # FHS script for AppImages
