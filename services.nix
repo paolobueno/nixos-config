@@ -47,7 +47,8 @@ pkgs : {
     xkbVariant = ",";
     xkbOptions = "grp:toggle";
 
-    videoDrivers = [ "intel" ];
+    # videoDrivers = [ "intel" ];
+    videoDrivers = [ "nvidia" ];
     desktopManager = {
       xterm.enable = false;
       xfce.enable = false;
