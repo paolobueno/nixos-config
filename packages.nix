@@ -96,6 +96,10 @@ pkgs : with pkgs;
   xautolock
   i3lock-color
   i3status-rust
+  (polybar.override{
+    pulseSupport = true;
+    i3Support = true;
+  })
   libnotify
 
   # IDEs and devtools
