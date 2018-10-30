@@ -10,8 +10,12 @@ pkgs : {
   printing.enable = true;
   illum.enable = true;
 
-  compton.enable = true;
-  # compton.backend = "glx";
+  compton = {
+    enable = true;
+    backend = "glx";
+    vSync = "opengl-swc";
+    inactiveOpacity = "0.8";
+  };
   tlp = {
     enable = true;
     extraConfig = ''
