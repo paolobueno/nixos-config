@@ -12,9 +12,9 @@ pkgs : {
 
   compton = {
     enable = true;
-    backend = "glx";
-    vSync = "opengl-swc";
-    inactiveOpacity = "0.8";
+    # backend = "glx";
+    # vSync = "opengl-swc";
+    # inactiveOpacity = "0.8";
   };
   tlp = {
     enable = true;
@@ -51,8 +51,8 @@ pkgs : {
     xkbVariant = ",";
     xkbOptions = "grp:toggle";
 
-    # videoDrivers = [ "intel" ];
-    videoDrivers = [ "nvidia" ];
+    videoDrivers = [ "intel" ];
+    # videoDrivers = [ "nvidia" ];
     desktopManager = {
       xterm.enable = false;
       xfce.enable = false;

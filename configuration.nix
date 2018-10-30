@@ -115,10 +115,10 @@
   #NVIDIA
 
   ## bumblebee
-  # hardware.bumblebee.enable = true;
-  # hardware.bumblebee.driver = "nvidia";
-  # hardware.bumblebee.pmMethod = "bbswitch";
-  # hardware.bumblebee.connectDisplay = true;
+  hardware.bumblebee.enable = true;
+  hardware.bumblebee.driver = "nvidia";
+  hardware.bumblebee.pmMethod = "bbswitch";
+  hardware.bumblebee.connectDisplay = true;
 
   ## Optimus
   # hardware.nvidiaOptimus.disable = true;
@@ -126,11 +126,11 @@
   # hardware.opengl.extraPackages32 = [ pkgs_i686.linuxPackages.nvidia_x11.out ];
 
   ## Prime
-  hardware.nvidia.optimus_prime = {
-    enable = true;
-    nvidiaBusId = "PCI:1:0:0";
-    intelBusId = "PCI:0:2:0";
-  };
+  # hardware.nvidia.optimus_prime = {
+    # enable = true;
+    # nvidiaBusId = "PCI:1:0:0";
+    # intelBusId = "PCI:0:2:0";
+  # };
 
   # hardware.opengl.driSupport32Bit = true;
 
