@@ -45,6 +45,8 @@ pkgs : with pkgs;
   htop                # task manager
   jq                  # sed for json
   tree                # tree
+  gource              # vcs viz tool
+  graphviz            # viz tools
   pv                  # monitor pipe progress
   xclip               # clipboard util
   appimage-run        # FHS script for AppImages
