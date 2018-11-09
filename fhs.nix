@@ -3,6 +3,7 @@
   targetPkgs = pkgs: with pkgs; [
     nodejs-10_x
     python
+    gnumake
 
     stdenv.cc.cc
     alsaLib
