@@ -55,7 +55,7 @@ pkgs : with pkgs;
   pmutils             # pm-hibernate and other utils
   moreutils           # `sponge` and others
   libcaca             # render bitmaps as text
-  # (wine.override { wineBuild = "wineWow"; })
+  (wine.override { wineBuild = "wineWow"; })
   awscli
   dmidecode
   glxinfo
