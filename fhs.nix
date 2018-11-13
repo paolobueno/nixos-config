@@ -4,6 +4,7 @@
     nodejs-10_x
     python
     gnumake
+    nodePackages.yarn
 
     stdenv.cc.cc
     alsaLib
