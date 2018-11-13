@@ -2,13 +2,20 @@ pkgs : {
   neo4j.enable = false;
   ipfs.enable = false;
   redis.enable = false;
-  teamviewer.enable = false;
-  mysql.enable = true;
+  mysql.enable = false;
   couchdb.enable = false;
   mongodb.enable = false;
   postgresql.enable = false;
+  mosquitto = {
+    enable = false;
+    host = "0.0.0.0";
+  };
+
+  # infrastructure
+  openssh.enable = true;
   printing.enable = true;
   illum.enable = true;
+  teamviewer.enable = false;
 
   compton = {
     enable = true;
@@ -23,7 +30,6 @@ pkgs : {
     '';
   };
 
-  openssh.enable = true;
 
   mysql.package = pkgs.mysql;
   couchdb.package = pkgs.couchdb2;
@@ -36,11 +42,6 @@ pkgs : {
   avahi.publish.enable = true;
   avahi.publish.userServices = true;
   avahi.nssmdns = true;
-
-  mosquitto = {
-    enable = false;
-    host = "0.0.0.0";
-  };
 
   xserver = {
     enable = true;
@@ -89,6 +90,7 @@ pkgs : {
     libinput = {
       enable = true;
       disableWhileTyping = true;
+      naturalScrolling = true;
     };
   };
 }
