@@ -125,6 +125,7 @@ pkgs : with pkgs;
   spotify
   crawl
   openttd
+  streamlink
   #(let
       #version = "5.0.0-beta.18";
     #in
