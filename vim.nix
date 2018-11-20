@@ -32,10 +32,11 @@ pkgs : pkgs.vim_configurable.customize {
     set laststatus=2
     set nojoinspaces
     set nospell
-    set nowrap
     set showmatch
     set showmode
     set smarttab
+    set wrap
+    set linebreak
 
     set statusline+=%#warningmsg#
     set statusline+=%{SyntasticStatuslineFlag()}
