@@ -4,6 +4,7 @@
     nodejs-10_x
     python
     gnumake
+    logger
     nodePackages.yarn
 
     stdenv.cc.cc
@@ -36,6 +37,7 @@
     nss
     nss
     pango
+    pangox_compat
     strace
     systemd
     udev
