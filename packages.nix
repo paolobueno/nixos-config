@@ -99,11 +99,12 @@ pkgs : with pkgs;
   xautolock
   i3lock-color
   i3status-rust
-  (polybar.override{
-    pulseSupport = true;
-    i3Support = true;
-  })
+  #(polybar.override{
+    #pulseSupport = true;
+    #i3Support = true;
+  #})
   libnotify
+  libinput-gestures
 
   # IDEs and devtools
   vscode
