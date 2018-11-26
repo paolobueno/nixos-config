@@ -38,6 +38,7 @@ pkgs : with pkgs;
   zip                 # Zip archive creator
   pciutils
   openconnect         # cisco vpn
+  openvpn
   vpnc                # another cisco vpn client
   ntfs3g              # ntfs mount/format support
   s-tui               # cpu governor monitor and stress test runner
