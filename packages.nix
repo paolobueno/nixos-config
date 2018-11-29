@@ -116,6 +116,7 @@ pkgs : with pkgs;
   font-manager
   inkscape
   fontforge-gtk
+  virtualbox
 
   # GUI applets
   networkmanagerapplet # networkmanager front-end
