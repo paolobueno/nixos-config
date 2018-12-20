@@ -112,6 +112,8 @@
     gc.automatic = true;
   };
 
+  hardware.opengl.driSupport32Bit = true;
+
   #NVIDIA
 
   ## bumblebee
@@ -132,8 +134,6 @@
     # intelBusId = "PCI:0:2:0";
   # };
 
-  # hardware.opengl.driSupport32Bit = true;
-
   # https://bbs.archlinux.org/viewtopic.php?id=223056
   boot.kernelParams = [
     ''acpi_rev_override=5''
@@ -150,7 +150,7 @@
   nixpkgs.config = {
     allowUnfree = true;
     packageOverrides = pkgs: {
-      stable = import <stable> {
+      unstable = import <unstable> {
         config = config.nixpkgs.config;
       };
     };

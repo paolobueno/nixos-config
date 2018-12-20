@@ -7,6 +7,7 @@ pkgs : with pkgs;
   bind                # DNS utilities
   google-chrome       # Web browser
   chromium
+  firefox
   curl                # Web client
   feh                 # Image viewer
   nomacs              # Image viewer
@@ -85,9 +86,9 @@ pkgs : with pkgs;
   # runtimes
   ruby
   python
-  rustup
-  stable.purescript
-  psc-package
+  # rustup
+  # purescript
+  # psc-package
   nodejs-10_x
   docker
 
@@ -95,7 +96,10 @@ pkgs : with pkgs;
   lxappearance
   arc-icon-theme
   arc-theme
+  # gnome3.adwaita-icon-theme
+  # capitaine-cursors
   moka-icon-theme
+  hicolor-icon-theme
   xautolock
   i3lock-color
   i3status-rust
@@ -107,7 +111,7 @@ pkgs : with pkgs;
   libinput-gestures
 
   # IDEs and devtools
-  vscode
+  unstable.vscode
   insomnia
   robo3t
   libreoffice
@@ -122,13 +126,14 @@ pkgs : with pkgs;
   networkmanagerapplet # networkmanager front-end
   pavucontrol          # pulseaudio GUI
   pcmanfm
+  slack
 
   # extra, personal
-  stable.dropbox
-  spotify
+  dropbox
   crawl
   openttd
   streamlink
+  steam
   #(let
       #version = "5.0.0-beta.18";
     #in
