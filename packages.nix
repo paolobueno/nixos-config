@@ -15,6 +15,7 @@ pkgs : with pkgs;
   git                 # Source control system
   gitAndTools.hub     # GitHub client, wrapper around `git`
   gnome3.dconf        # GNome configuration module used by other gnome software
+  gnome2.GConf
   gnumake             # Build tool
   gnupg               # Encryption toolset
   gparted             # Disk drive manager
@@ -86,11 +87,14 @@ pkgs : with pkgs;
   # runtimes
   ruby
   python
-  # rustup
+  rustup
   # purescript
   # psc-package
   nodejs-10_x
   docker
+  ## golang
+  go
+  libcap
 
   # desktop
   lxappearance

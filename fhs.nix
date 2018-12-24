@@ -22,6 +22,7 @@
     git
     glib
     gnome2.GConf
+    gnome3.dconf
     gtk2
     gtk3
     libcap

@@ -43,6 +43,8 @@ pkgs : {
   avahi.publish.userServices = true;
   avahi.nssmdns = true;
 
+  # dbus.packages = [pkgs.gnome2.GConf.out];
+
   xserver = {
     enable = true;
     enableTCP = false;
