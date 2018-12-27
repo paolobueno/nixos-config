@@ -14,8 +14,7 @@ pkgs : with pkgs;
   gcc                 # C compiler
   git                 # Source control system
   gitAndTools.hub     # GitHub client, wrapper around `git`
-  gnome3.dconf        # GNome configuration module used by other gnome software
-  gnome2.GConf
+  gnome3.dconf        # Gnome configuration module used by other gnome software
   gnumake             # Build tool
   gnupg               # Encryption toolset
   gparted             # Disk drive manager
@@ -52,7 +51,7 @@ pkgs : with pkgs;
   graphviz            # viz tools
   pv                  # monitor pipe progress
   xclip               # clipboard util
-  appimage-run        # FHS script for AppImages
+  unstable.appimage-run        # FHS script for AppImages
   blueman             # bluetooth suite
   xorg.xkill          # kill a process by it's X window
   pmutils             # pm-hibernate and other utils
@@ -68,7 +67,6 @@ pkgs : with pkgs;
   rename
   python27Packages.pygments
   xorg.xbacklight
-  strongswanNM
 
   # terminal stuff
   tmux                # terminal multiplexer
@@ -90,7 +88,7 @@ pkgs : with pkgs;
   rustup
   # purescript
   # psc-package
-  nodejs-10_x
+  unstable.nodejs-10_x
   docker
   ## golang
   go
@@ -125,12 +123,14 @@ pkgs : with pkgs;
   inkscape
   fontforge-gtk
   virtualbox
+  gnome3.gedit
 
   # GUI applets
   networkmanagerapplet # networkmanager front-end
   pavucontrol          # pulseaudio GUI
   pcmanfm
   slack
+  fbreader
 
   # extra, personal
   dropbox
@@ -150,7 +150,7 @@ pkgs : with pkgs;
     #})
   #)
 ] ++ (with nodePackages; [
-  yarn                # Alternative to npm
+  unstable.yarn                # Alternative to npm
   eslint              # linter
 ]) ++ (with haskellPackages; [
   ghc
