@@ -67,6 +67,8 @@ pkgs : with pkgs;
   rename
   python27Packages.pygments
   xorg.xbacklight
+  opencv
+  pkgconfig
 
   # terminal stuff
   tmux                # terminal multiplexer
@@ -124,6 +126,7 @@ pkgs : with pkgs;
   fontforge-gtk
   virtualbox
   gnome3.gedit
+  octaveFull
 
   # GUI applets
   networkmanagerapplet # networkmanager front-end
@@ -153,5 +156,6 @@ pkgs : with pkgs;
   unstable.yarn                # Alternative to npm
   eslint              # linter
 ]) ++ (with haskellPackages; [
-  ghc
+  unstable.ghc
+  unstable.stack
 ])
