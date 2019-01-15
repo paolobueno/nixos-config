@@ -69,6 +69,7 @@ pkgs : with pkgs;
   xorg.xbacklight
   opencv
   pkgconfig
+  pass
 
   # terminal stuff
   tmux                # terminal multiplexer
