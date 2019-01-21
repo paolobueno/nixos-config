@@ -119,7 +119,6 @@ pkgs : with pkgs;
   unstable.vscode
   insomnia
   robo3t
-  libreoffice
   krita
   pencil
   font-manager
