@@ -23,6 +23,7 @@ pkgs : with pkgs;
   lshw                # List hardware
   maim                # Takes screenshots
   imagemagick         # Image editing suite
+  vips                # imagemagick alternative
   meld                # View differences between text files
   nnn                 # File browser
   psmisc              # Process management utilities
@@ -58,18 +59,20 @@ pkgs : with pkgs;
   moreutils           # `sponge` and others
   libcaca             # render bitmaps as text
   (wine.override { wineBuild = "wineWow"; })
-  awscli
-  dmidecode
-  glxinfo
+  caddy               # https server
+  awscli # Abdul Works Smoothly CLI
+  dmidecode # BIOS info parser
+  glxinfo # GL tester
   acpi
   lm_sensors
-  pandoc
+  pandoc # anything-to-anything converter
   rename
   python27Packages.pygments
   xorg.xbacklight
   opencv
   pkgconfig
   pass
+  qrencode
 
   # terminal stuff
   tmux                # terminal multiplexer
@@ -117,23 +120,25 @@ pkgs : with pkgs;
 
   # IDEs and devtools
   unstable.vscode
-  insomnia
-  robo3t
-  krita
-  pencil
+  insomnia # better postman
+  robo3t # robomongo
+  krita # raster graphics editor
+  pencil # GUI prototyping
   font-manager
-  inkscape
-  fontforge-gtk
-  virtualbox
-  gnome3.gedit
-  octaveFull
+  inkscape # SVG studio
+  fontforge-gtk # font editor
+  virtualbox # virt
+  gnome3.gedit # notepad
+  octaveFull # MATLAB as in beer
 
   # GUI applets
   networkmanagerapplet # networkmanager front-end
   pavucontrol          # pulseaudio GUI
-  pcmanfm
-  slack
-  fbreader
+  pcmanfm # file browser
+  slack # slack electron client
+  fbreader             # epub reader
+  zathura              # pdf reader
+  freemind             # mind mapping tool
 
   # extra, personal
   dropbox
@@ -154,6 +159,7 @@ pkgs : with pkgs;
   #)
 ] ++ (with nodePackages; [
   unstable.yarn                # Alternative to npm
+  serve
   eslint              # linter
 ]) ++ (with haskellPackages; [
   unstable.ghc
