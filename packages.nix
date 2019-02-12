@@ -139,6 +139,7 @@ pkgs : with pkgs;
   fbreader             # epub reader
   zathura              # pdf reader
   freemind             # mind mapping tool
+  libreoffice
 
   # extra, personal
   dropbox
