@@ -67,11 +67,11 @@ pkgs : with pkgs;
   lm_sensors
   pandoc # anything-to-anything converter
   rename
-  python27Packages.pygments
   xorg.xbacklight
   opencv
   pkgconfig
   pass
+  gopass
   qrencode
 
   # terminal stuff
@@ -165,4 +165,7 @@ pkgs : with pkgs;
 ]) ++ (with haskellPackages; [
   unstable.ghc
   unstable.stack
+]) ++ (with python27Packages; [
+  pygments
+  pip
 ])
