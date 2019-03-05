@@ -52,7 +52,7 @@ pkgs : with pkgs;
   graphviz            # viz tools
   pv                  # monitor pipe progress
   xclip               # clipboard util
-  unstable.appimage-run        # FHS script for AppImages
+  appimage-run        # FHS script for AppImages
   blueman             # bluetooth suite
   xorg.xkill          # kill a process by it's X window
   pmutils             # pm-hibernate and other utils
@@ -130,6 +130,8 @@ pkgs : with pkgs;
   virtualbox # virt
   gnome3.gedit # notepad
   octaveFull # MATLAB as in beer
+  mariadb
+  postgresql
 
   # GUI applets
   networkmanagerapplet # networkmanager front-end
@@ -146,6 +148,7 @@ pkgs : with pkgs;
   crawl
   openttd
   streamlink
+  exercism # exercism learning website cli
   steam
   #(let
       #version = "5.0.0-beta.18";
