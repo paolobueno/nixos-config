@@ -33,6 +33,7 @@ pkgs : with pkgs;
   unzip               # Zip archive extractor
   usbutils            # USB device management utilities
   mpv                 # Video player
+  ffmpeg
   wget                # Web client
   which               # Linux executable finder
   xorg.xev            # List X events
@@ -132,6 +133,7 @@ pkgs : with pkgs;
   octaveFull # MATLAB as in beer
   mariadb
   postgresql
+  binutils-unwrapped
 
   # GUI applets
   networkmanagerapplet # networkmanager front-end
