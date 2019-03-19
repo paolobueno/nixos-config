@@ -8,8 +8,10 @@
     nodePackages.yarn
 
     stdenv.cc.cc
+    at-spi2-core
     alsaLib
     atk
+    at-spi2-atk
     cairo
     cups
     dbus
@@ -31,7 +33,9 @@
     libnotify
     libsecret
     libxml2
+    libpng12
     libxslt
+    libuuid
     netcat
     nspr
     nspr
