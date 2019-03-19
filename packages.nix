@@ -112,6 +112,7 @@ pkgs : with pkgs;
   xautolock
   i3lock-color
   i3status-rust
+  j4-dmenu-desktop
   #(polybar.override{
     #pulseSupport = true;
     #i3Support = true;
@@ -125,6 +126,7 @@ pkgs : with pkgs;
   robo3t # robomongo
   krita # raster graphics editor
   pencil # GUI prototyping
+  blender
   font-manager
   inkscape # SVG studio
   fontforge-gtk # font editor
