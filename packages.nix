@@ -1,4 +1,17 @@
 pkgs : with pkgs;
+let
+  my-python-packages = python-packages: with python-packages; [
+  pygments
+  pip
+  tensorflow
+  numpy
+  pandas
+  scikitlearn
+  matplotlib
+  h5py
+];
+  my-python = python3.withPackages my-python-packages;
+in
 [
   (callPackage ./fhs.nix {})
   (import ./vim.nix pkgs)
@@ -91,8 +104,9 @@ pkgs : with pkgs;
 
   # runtimes
   ruby
-  python
+  my-python
   rustup
+  pypi2nix
   # purescript
   # psc-package
   unstable.nodejs-10_x
@@ -172,7 +186,5 @@ pkgs : with pkgs;
 ]) ++ (with haskellPackages; [
   unstable.ghc
   unstable.stack
-]) ++ (with python27Packages; [
-  pygments
-  pip
 ])
+
