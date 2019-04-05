@@ -100,7 +100,8 @@ in
     ];
   })
   rxvt_unicode
-  # alacritty         # GPU acellerated emulator
+  ngrok
+  alacritty         # GPU acellerated emulator
 
   # runtimes
   ruby
