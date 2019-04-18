@@ -82,20 +82,25 @@
     hostName = "paolo-nixos";
   };
 
-  fonts.enableDefaultFonts = true;
-  fonts.fonts = with pkgs; [
-    fira-code
-    fira-code-symbols
-    powerline-fonts
-    liberation_ttf
-    noto-fonts
-    noto-fonts-cjk
-    noto-fonts-emoji
-    emojione
-    symbola
-    font-awesome_5
-    iosevka-bin
-  ];
+  fonts = {
+    enableDefaultFonts = true;
+    fontconfig.penultimate.enable = true;
+    fonts = with pkgs; [
+      fira-code
+      fira-code-symbols
+      powerline-fonts
+      liberation_ttf
+      noto-fonts
+      noto-fonts-cjk
+      noto-fonts-emoji
+      emojione
+      symbola
+      # nerdfonts
+      font-awesome_5
+      iosevka-bin
+      monoid
+    ];
+  };
 
   environment.variables = { EDITOR = "vim"; };
   users.users.paolo = {

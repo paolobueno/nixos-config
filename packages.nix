@@ -137,6 +137,7 @@ in
 
   # IDEs and devtools
   unstable.vscode
+  neovim
   insomnia # better postman
   robo3t # robomongo
   krita # raster graphics editor
