@@ -9,6 +9,7 @@ let
   scikitlearn
   matplotlib
   h5py
+  conda
 ];
   my-python = python3.withPackages my-python-packages;
 in
@@ -93,7 +94,6 @@ in
   (st.override {
     # conf = builtins.readFile ./st/config.def.h;
     patches = [
-      ./st/st-scrollback-0.8.diff
       ./st/font.diff
       ./st/dracula.diff
       ./st/st-fix-keyboard-input-20180605-dc3b5ba.diff
@@ -169,7 +169,7 @@ in
   openttd
   streamlink
   exercism # exercism learning website cli
-  steam
+  # steam
   #(let
       #version = "5.0.0-beta.18";
     #in
