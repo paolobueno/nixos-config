@@ -102,7 +102,10 @@
     ];
   };
 
-  environment.variables = { EDITOR = "vim"; };
+  environment.variables = {
+    EDITOR = "vim";
+    TERMINAL = "st";
+  };
   users.users.paolo = {
     isNormalUser = true;
     uid = 1000;
@@ -155,7 +158,7 @@
   nixpkgs.config = {
     allowUnfree = true;
     packageOverrides = pkgs: {
-      unstable = import <unstable> {
+      stable = import <stable> {
         config = config.nixpkgs.config;
       };
     };

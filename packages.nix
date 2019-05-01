@@ -45,6 +45,7 @@ in
   tldr                # Linux command line cheat sheet
   tixati              # Torrent client
   unzip               # Zip archive extractor
+  p7zip
   usbutils            # USB device management utilities
   mpv                 # Video player
   ffmpeg
@@ -94,9 +95,9 @@ in
   (st.override {
     # conf = builtins.readFile ./st/config.def.h;
     patches = [
+      ./st/scrollback.diff
       ./st/font.diff
       ./st/dracula.diff
-      ./st/st-fix-keyboard-input-20180605-dc3b5ba.diff
     ];
   })
   rxvt_unicode
@@ -106,11 +107,12 @@ in
   # runtimes
   ruby
   my-python
+  julia
   rustup
   pypi2nix
   # purescript
   # psc-package
-  unstable.nodejs-10_x
+  nodejs-10_x
   docker
   ## golang
   go
@@ -136,7 +138,7 @@ in
   libinput-gestures
 
   # IDEs and devtools
-  unstable.vscode
+  vscode
   neovim
   insomnia # better postman
   robo3t # robomongo
@@ -170,23 +172,13 @@ in
   streamlink
   exercism # exercism learning website cli
   # steam
-  #(let
-      #version = "5.0.0-beta.18";
-    #in
-    #franz.overrideAttrs (oldAttrs: rec {
-      #name = "franz-${version}";
-      #src = fetchurl {
-        #url = "https://github.com/meetfranz/franz/releases/download/v${version}/franz-${version}.tar.gz";
-        #sha256 = "96090ae3722f43c2f03ea9412edaf1436a25fc19bbccf30ab1f0fe494ec01825";
-      #};
-    #})
-  #)
+  # franz
 ] ++ (with nodePackages; [
-  unstable.yarn                # Alternative to npm
+  yarn                # Alternative to npm
   serve
   eslint              # linter
 ]) ++ (with haskellPackages; [
-  unstable.ghc
-  unstable.stack
+  ghc
+  stack
 ])
 
