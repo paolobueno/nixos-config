@@ -43,6 +43,8 @@ pkgs : {
   avahi.publish.userServices = true;
   avahi.nssmdns = true;
 
+  fractalart.enable = true;
+
   # dbus.packages = [pkgs.gnome2.GConf.out];
 
   xserver = {
