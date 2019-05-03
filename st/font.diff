@@ -7,7 +7,7 @@ index 82b1b09..a80b28e 100644
   * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
   */
 -static char *font = "Liberation Mono:pixelsize=12:antialias=true:autohint=true";
-+static char *font = "Iosevka:size=11";
++static char *font = "Iosevka:size=10.5:antialias=true:autohint=true";
  static int borderpx = 2;
 
  /*
