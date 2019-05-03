@@ -2,6 +2,7 @@ pkgs : with pkgs;
 let
   my-python-packages = python-packages: with python-packages; [
   pygments
+  pylint
   pip
   tensorflow
   numpy
