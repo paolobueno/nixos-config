@@ -155,6 +155,7 @@ in
   mariadb
   postgresql
   binutils-unwrapped
+  android-studio
 
   # GUI applets
   networkmanagerapplet # networkmanager front-end
