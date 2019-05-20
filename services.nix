@@ -29,7 +29,7 @@ pkgs : {
       RUNTIME_PM_BLACKLIST="01:00.0"
     '';
   };
-
+  udisks2.enable = true;
 
   mysql.package = pkgs.mysql;
   couchdb.package = pkgs.couchdb2;
@@ -79,7 +79,7 @@ pkgs : {
       enable = true;
       extraOptions = [ "-detectsleep" ];
 
-      time = 15; # default
+      time = 15;
       locker = "${pkgs.i3lock-color}/bin/i3lock-color -k -c 282a36";
 
       enableNotifier = true;

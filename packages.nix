@@ -11,6 +11,7 @@ let
   matplotlib
   h5py
   conda
+  binwalk-full
 ];
   my-python = python3.withPackages my-python-packages;
 in
@@ -55,6 +56,7 @@ in
   xorg.xev            # List X events
   xsel                # Clipboard manager
   zip                 # Zip archive creator
+  unixtools.xxd
   pciutils
   openconnect         # cisco vpn
   openvpn
@@ -90,6 +92,10 @@ in
   pass
   gopass
   qrencode
+  udiskie
+  rofi
+  rofi-pass
+  xdotool
 
   # terminal stuff
   tmux                # terminal multiplexer
@@ -114,7 +120,9 @@ in
   # purescript
   # psc-package
   nodejs-10_x
-  docker
+  pharo
+  pharo-launcher
+  pharo-spur64
   ## golang
   go
   libcap
@@ -150,12 +158,16 @@ in
   inkscape # SVG studio
   fontforge-gtk # font editor
   virtualbox # virt
+  docker
   gnome3.gedit # notepad
   octaveFull # MATLAB as in beer
   mariadb
   postgresql
   binutils-unwrapped
   android-studio
+  hexedit
+  john
+  steghide
 
   # GUI applets
   networkmanagerapplet # networkmanager front-end
