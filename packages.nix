@@ -18,7 +18,7 @@ in
 [
   (callPackage ./fhs.nix {})
   (import ./vim.nix pkgs)
-  arandr              # Screen control
+  stable.arandr              # Screen control
   bashmount           # Mount USB storage
   bind                # DNS utilities
   google-chrome       # Web browser
@@ -185,6 +185,7 @@ in
   openttd
   streamlink
   exercism # exercism learning website cli
+  discord
   # steam
   # franz
 ] ++ (with nodePackages; [
