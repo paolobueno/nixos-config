@@ -22,7 +22,7 @@ in
   bashmount           # Mount USB storage
   bind                # DNS utilities
   google-chrome       # Web browser
-  chromium
+  # chromium
   firefox
   curl                # Web client
   feh                 # Image viewer
@@ -39,7 +39,6 @@ in
   lshw                # List hardware
   maim                # Takes screenshots
   imagemagick         # Image editing suite
-  vips                # imagemagick alternative
   meld                # View differences between text files
   nnn                 # File browser
   psmisc              # Process management utilities
@@ -47,7 +46,7 @@ in
   tldr                # Linux command line cheat sheet
   tixati              # Torrent client
   unzip               # Zip archive extractor
-  p7zip
+  p7zip               # 7z
   usbutils            # USB device management utilities
   mpv                 # Video player
   ffmpeg
@@ -56,18 +55,15 @@ in
   xorg.xev            # List X events
   xsel                # Clipboard manager
   zip                 # Zip archive creator
-  unixtools.xxd
+  unixtools.xxd       # hexdump
   pciutils
-  openconnect         # cisco vpn
-  openvpn
-  vpnc                # another cisco vpn client
   ntfs3g              # ntfs mount/format support
   s-tui               # cpu governor monitor and stress test runner
   stress              # stress runner, optional dep for s-tui
   htop                # task manager
   jq                  # sed for json
   tree                # tree
-  gource              # vcs viz tool
+  # gource              # animated viz for git repos
   graphviz            # viz tools
   pv                  # monitor pipe progress
   xclip               # clipboard util
@@ -79,23 +75,22 @@ in
   libcaca             # render bitmaps as text
   (wine.override { wineBuild = "wineWow"; })
   caddy               # https server
-  awscli # Abdul Works Smoothly CLI
   dmidecode # BIOS info parser
   glxinfo # GL tester
   acpi
   lm_sensors
-  pandoc # anything-to-anything converter
+  pandoc              # anything-to-anything converter
   rename
   xorg.xbacklight
-  opencv
+  # opencv
   pkgconfig
   pass
   gopass
-  qrencode
+  qrencode            # generates qr codes
   udiskie
-  rofi
-  rofi-pass
   xdotool
+  vips                # imagemagick alternative
+
 
   # terminal stuff
   tmux                # terminal multiplexer
@@ -107,9 +102,9 @@ in
       ./st/dracula.diff
     ];
   })
-  rxvt_unicode
+  # rxvt_unicode
   ngrok
-  alacritty         # GPU acellerated emulator
+  # alacritty         # GPU acellerated emulator
 
   # runtimes
   ruby
@@ -143,55 +138,61 @@ in
     #pulseSupport = true;
     #i3Support = true;
   #})
+  font-manager
   libnotify
   libinput-gestures
 
   # IDEs and devtools
-  vscode
-  neovim
-  insomnia # better postman
-  robo3t # robomongo
-  krita # raster graphics editor
-  pencil # GUI prototyping
-  blender
-  font-manager
-  inkscape # SVG studio
-  fontforge-gtk # font editor
-  virtualbox # virt
-  docker
-  gnome3.gedit # notepad
-  octaveFull # MATLAB as in beer
-  mariadb
-  postgresql
+  vscode                 # M$ Overlords
+  neovim                 # new vim
+  insomnia               # better postman
+  robo3t                 # mongodb client, ex-robomongo
+  virtualbox             # virtual machines
+  docker                 # virtual processes
+  gnome3.gedit           # notepad
+  octaveFull             # MATLAB as in beer
+  mariadb                # mariadb/mysql client
+  postgresql             # pg client
   binutils-unwrapped
   android-studio
   hexedit
-  john
-  steghide
+  john                   # brute force tool
+  awscli                 # Abdul Works Smoothly CLI
+  steghide               # finds files hidden inside other files
 
-  # GUI applets
-  networkmanagerapplet # networkmanager front-end
-  pavucontrol          # pulseaudio GUI
-  pcmanfm # file browser
-  slack # slack electron client
-  fbreader             # epub reader
-  zathura              # pdf reader
-  freemind             # mind mapping tool
-  libreoffice
+  # GUI apps
+  networkmanagerapplet   # networkmanager tray front-end
+  pavucontrol            # pulseaudio GUI
+  pcmanfm                # file browser
+  slack                  # slack electron client
+  # fbreader              # epub reader
+  zathura                # pdf reader
+  # freemind              # mind mapping tool
+  libreoffice            # Office
+  pencil                 # GUI prototyping
+  blender                # 3D editor
+  krita                  # raster graphics editor
+  inkscape               # vector graphics editor
+  fontforge-gtk          # font editor
+
+  # Networking
+  # openconnect         # cisco vpn
+  # openvpn
+  # vpnc                # another cisco vpn client
 
   # extra, personal
   dropbox
   crawl
   openttd
   streamlink
-  exercism # exercism learning website cli
+  # exercism             # exercism learning website cli
   discord
   # steam
   # franz
 ] ++ (with nodePackages; [
-  yarn                # Alternative to npm
+  yarn                   # Alternative to npm
   serve
-  eslint              # linter
+  eslint                 # linter
 ]) ++ (with haskellPackages; [
   ghc
   stack
