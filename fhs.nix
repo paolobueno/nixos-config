@@ -7,6 +7,15 @@
     logger
     nodePackages.yarn
 
+    # Julia Arpack
+    gfortran.cc
+    (pkgs.runCommand "openblas64_" {} ''
+      mkdir -p "$out"/lib/
+        ln -s ${openblasCompat}/lib/libopenblas.so "$out"/lib/libopenblas64_.so.0
+    '')
+    # cuda toolkit
+    cudnn
+
     stdenv.cc.cc
     at-spi2-core
     alsaLib

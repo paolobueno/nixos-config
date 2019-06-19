@@ -90,6 +90,7 @@ in
   udiskie
   xdotool
   vips                # imagemagick alternative
+  cudnn
 
 
   # terminal stuff
@@ -108,8 +109,9 @@ in
 
   # runtimes
   ruby
+  dotnet-sdk
   my-python
-  julia
+  julia_11
   rustup
   pypi2nix
   # purescript
@@ -144,6 +146,7 @@ in
 
   # IDEs and devtools
   vscode                 # M$ Overlords
+  atom
   neovim                 # new vim
   insomnia               # better postman
   robo3t                 # mongodb client, ex-robomongo
@@ -158,6 +161,7 @@ in
   hexedit
   john                   # brute force tool
   awscli                 # Abdul Works Smoothly CLI
+  heroku
   steghide               # finds files hidden inside other files
 
   # GUI apps
