@@ -36,6 +36,7 @@
     gnome3.dconf
     gtk2
     gtk3
+    icu
     libcap
     libgnome-keyring3
     libgpgerror
@@ -50,6 +51,7 @@
     nspr
     nss
     nss
+    openssl
     pango
     pangox_compat
     strace
