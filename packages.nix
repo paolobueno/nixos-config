@@ -155,7 +155,7 @@ in
   gnome3.gedit           # notepad
   octaveFull             # MATLAB as in beer
   mariadb                # mariadb/mysql client
-  postgresql             # pg client
+  postgresql_10          # pg client
   binutils-unwrapped
   android-studio
   hexedit
