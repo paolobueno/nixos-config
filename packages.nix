@@ -12,6 +12,7 @@ let
   h5py
   conda
   binwalk-full
+  azure-cli
 ];
   my-python = python3.withPackages my-python-packages;
 in
