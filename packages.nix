@@ -7,7 +7,7 @@ let
   tensorflow
   numpy
   pandas
-  scikitlearn
+  # scikitlearn
   matplotlib
   h5py
   conda
@@ -73,7 +73,7 @@ in
   pmutils             # pm-hibernate and other utils
   moreutils           # `sponge` and others
   libcaca             # render bitmaps as text
-  (wine.override { wineBuild = "wineWow"; })
+  # (wine.override { wineBuild = "wineWow"; })
   caddy               # https server
   dmidecode # BIOS info parser
   glxinfo # GL tester
@@ -91,6 +91,7 @@ in
   xdotool
   vips                # imagemagick alternative
   cudnn
+  watchman            # file watcher
 
 
   # terminal stuff
