@@ -162,10 +162,10 @@
         config = config.nixpkgs.config;
       };
     };
-    overlays = [
-      (import ./azure-cli-nix/default.nix)
-    ];
   };
+  nixpkgs.overlays = [
+    # (import ./azure-cli-nix/default.nix)
+  ];
 
   environment.systemPackages = (import ./packages.nix pkgs);
   services = (import ./services.nix pkgs);
