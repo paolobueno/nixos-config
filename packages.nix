@@ -118,7 +118,7 @@ in
   pypi2nix
   # purescript
   # psc-package
-  nodejs-10_x
+  nodejs-12_x
   pharo
   pharo-launcher
   pharo-spur64
@@ -158,9 +158,11 @@ in
   octaveFull             # MATLAB as in beer
   mariadb                # mariadb/mysql client
   postgresql_10          # pg client
+  dbeaver                # global database client
   binutils-unwrapped
   android-studio
   hexedit
+  silver-searcher
   john                   # brute force tool
   awscli                 # Abdul Works Smoothly CLI
   heroku
