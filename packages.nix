@@ -113,7 +113,7 @@ in
   ruby
   dotnet-sdk
   my-python
-  julia_11
+  stable.julia_11
   rustup
   pypi2nix
   # purescript
