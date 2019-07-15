@@ -113,6 +113,7 @@ in
   ruby
   dotnet-sdk
   my-python
+  python2
   stable.julia_11
   rustup
   pypi2nix
@@ -148,7 +149,7 @@ in
 
   # IDEs and devtools
   vscode                 # M$ Overlords
-  atom
+  sublime3
   neovim                 # new vim
   insomnia               # better postman
   robo3t                 # mongodb client, ex-robomongo
@@ -201,6 +202,7 @@ in
   yarn                   # Alternative to npm
   serve
   eslint                 # linter
+  javascript-typescript-langserver
 ]) ++ (with haskellPackages; [
   ghc
   stack
