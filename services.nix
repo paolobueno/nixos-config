@@ -20,7 +20,7 @@ pkgs : {
   compton = {
     enable = true;
     # backend = "glx";
-    # vSync = "opengl-swc";
+    vSync = true;
     # inactiveOpacity = "0.8";
   };
   tlp = {
