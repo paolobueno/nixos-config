@@ -113,7 +113,7 @@ in
   ruby
   dotnet-sdk
   my-python
-  python2
+  # python2
   stable.julia_11
   rustup
   pypi2nix
@@ -125,6 +125,7 @@ in
   pharo-spur64
   ## golang
   go
+  hugo # static website gen
   libcap
 
   # desktop
@@ -158,6 +159,7 @@ in
   gnome3.gedit           # notepad
   octaveFull             # MATLAB as in beer
   mariadb                # mariadb/mysql client
+  redis
   postgresql_10          # pg client
   dbeaver                # global database client
   binutils-unwrapped
