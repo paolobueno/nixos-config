@@ -70,7 +70,7 @@
 
   networking = {
     firewall.enable = true;
-    firewall.allowedTCPPorts = [22 3000 9418 8000 8080 443 80];
+    firewall.allowedTCPPorts = [22 3000 4000 9418 8000 8080 443 80];
     firewall.allowedTCPPortRanges = [
       {from = 19000; to=19100;}
     ];
