@@ -147,12 +147,13 @@ in
   font-manager
   libnotify
   libinput-gestures
+  qdirstat
 
   # IDEs and devtools
   vscode                 # M$ Overlords
   sublime3
   neovim                 # new vim
-  insomnia               # better postman
+  stable.insomnia               # better postman
   robo3t                 # mongodb client, ex-robomongo
   virtualbox             # virtual machines
   docker                 # virtual processes
@@ -182,7 +183,7 @@ in
   libreoffice            # Office
   pencil                 # GUI prototyping
   blender                # 3D editor
-  krita                  # raster graphics editor
+  stable.krita                  # raster graphics editor
   inkscape               # vector graphics editor
   fontforge-gtk          # font editor
 
@@ -196,6 +197,8 @@ in
   crawl
   openttd
   streamlink
+  keybase
+  keybase-gui
   # exercism             # exercism learning website cli
   discord
   # steam

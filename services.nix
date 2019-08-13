@@ -6,6 +6,10 @@ pkgs : {
   couchdb.enable = false;
   mongodb.enable = false;
   postgresql.enable = false;
+
+  keybase.enable = true;
+  kbfs.enable = true;
+
   mosquitto = {
     enable = false;
     host = "0.0.0.0";
