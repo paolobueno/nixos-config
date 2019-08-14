@@ -211,5 +211,7 @@ in
 ]) ++ (with haskellPackages; [
   ghc
   stack
+]) ++ (with ocamlPackages; [
+  merlin
 ])
 
