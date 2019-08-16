@@ -154,6 +154,7 @@ in
   sublime3
   neovim                 # new vim
   stable.insomnia               # better postman
+  postman
   robo3t                 # mongodb client, ex-robomongo
   virtualbox             # virtual machines
   docker                 # virtual processes
@@ -163,6 +164,7 @@ in
   redis
   postgresql_10          # pg client
   dbeaver                # global database client
+  openssl
   binutils-unwrapped
   android-studio
   hexedit
