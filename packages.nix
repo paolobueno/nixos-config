@@ -12,6 +12,7 @@ let
   h5py
   conda
   binwalk-full
+  cfn-lint
   # azure-cli
 ];
   my-python = python3.withPackages my-python-packages;
@@ -171,6 +172,7 @@ in
   silver-searcher
   john                   # brute force tool
   awscli                 # Abdul Works Smoothly CLI
+  stable.aws-sam-cli
   heroku
   steghide               # finds files hidden inside other files
 
