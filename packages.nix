@@ -1,20 +1,20 @@
 pkgs : with pkgs;
 let
   my-python-packages = python-packages: with python-packages; [
-  pygments
-  pylint
-  pip
-  tensorflow
-  numpy
-  pandas
-  # scikitlearn
-  matplotlib
-  h5py
-  conda
-  binwalk-full
-  cfn-lint
-  # azure-cli
-];
+    pygments
+    pylint
+    pip
+    tensorflow
+    numpy
+    pandas
+    # scikitlearn
+    matplotlib
+    h5py
+    conda
+    binwalk-full
+    cfn-lint
+    # azure-cli-core # not yet :(
+  ];
   my-python = python3.withPackages my-python-packages;
 in
 [
@@ -183,11 +183,12 @@ in
   slack                  # slack electron client
   # fbreader              # epub reader
   zathura                # pdf reader
+  okular                 # pdf reader - annotations support
   # freemind              # mind mapping tool
   libreoffice            # Office
   pencil                 # GUI prototyping
   blender                # 3D editor
-  stable.krita                  # raster graphics editor
+  krita                  # raster graphics editor
   inkscape               # vector graphics editor
   fontforge-gtk          # font editor
 
