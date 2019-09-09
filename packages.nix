@@ -70,7 +70,7 @@ in
   pv                  # monitor pipe progress
   xclip               # clipboard util
   appimage-run        # FHS script for AppImages
-  blueman             # bluetooth suite
+  stable.blueman             # bluetooth suite
   xorg.xkill          # kill a process by it's X window
   pmutils             # pm-hibernate and other utils
   moreutils           # `sponge` and others
@@ -154,7 +154,7 @@ in
   vscode                 # M$ Overlords
   sublime3
   neovim                 # new vim
-  stable.insomnia               # better postman
+  insomnia               # better postman
   postman
   robo3t                 # mongodb client, ex-robomongo
   virtualbox             # virtual machines
