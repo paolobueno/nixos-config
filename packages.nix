@@ -70,7 +70,7 @@ in
   pv                  # monitor pipe progress
   xclip               # clipboard util
   appimage-run        # FHS script for AppImages
-  stable.blueman             # bluetooth suite
+  blueman             # bluetooth suite
   xorg.xkill          # kill a process by it's X window
   pmutils             # pm-hibernate and other utils
   moreutils           # `sponge` and others
