@@ -32,7 +32,6 @@ in
   gcc                 # C compiler
   git                 # Source control system
   gitAndTools.hub     # GitHub client, wrapper around `git`
-  gnome3.dconf        # Gnome configuration module used by other gnome software
   gnumake             # Build tool
   gnupg               # Encryption toolset
   gparted             # Disk drive manager
@@ -70,7 +69,7 @@ in
   pv                  # monitor pipe progress
   xclip               # clipboard util
   appimage-run        # FHS script for AppImages
-  blueman             # bluetooth suite
+  stable.blueman             # bluetooth suite
   xorg.xkill          # kill a process by it's X window
   pmutils             # pm-hibernate and other utils
   moreutils           # `sponge` and others
@@ -130,12 +129,6 @@ in
   libcap
 
   # desktop
-  lxappearance
-  arc-icon-theme
-  arc-theme
-  # gnome3.adwaita-icon-theme
-  # capitaine-cursors
-  moka-icon-theme
   hicolor-icon-theme
   xautolock
   i3lock-color
@@ -150,6 +143,17 @@ in
   libinput-gestures
   qdirstat
 
+  ## Gnome
+  lxappearance
+  arc-icon-theme
+  arc-theme
+  # gnome3.adwaita-icon-theme
+  # gnome3.gnome-control-center
+  # gnome3.dconf        # Gnome configuration module used by other gnome software
+  capitaine-cursors
+  vanilla-dmz
+  # moka-icon-theme
+
   # IDEs and devtools
   vscode                 # M$ Overlords
   sublime3
@@ -160,11 +164,11 @@ in
   virtualbox             # virtual machines
   docker                 # virtual processes
   gnome3.gedit           # notepad
-  octaveFull             # MATLAB as in beer
+  # octaveFull             # MATLAB as in beer
   mariadb                # mariadb/mysql client
   redis
   postgresql_10          # pg client
-  dbeaver                # global database client
+  stable.dbeaver                # global database client
   openssl
   binutils-unwrapped
   android-studio
@@ -172,7 +176,8 @@ in
   silver-searcher
   john                   # brute force tool
   awscli                 # Abdul Works Smoothly CLI
-  stable.aws-sam-cli
+  aws-sam-cli
+  terraform_0_12
   heroku
   steghide               # finds files hidden inside other files
 
