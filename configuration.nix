@@ -161,6 +161,9 @@
       stable = import <stable> {
         config = config.nixpkgs.config;
       };
+      unstable = import <unstable> {
+        config = config.nixpkgs.config;
+      };
     };
   };
   nixpkgs.overlays = [

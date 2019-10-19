@@ -1,15 +1,15 @@
 pkgs : with pkgs;
 let
   my-python-packages = python-packages: with python-packages; [
-    pygments
-    pylint
-    pip
-    tensorflow
-    numpy
-    pandas
+    # pygments
+    # pylint
+    # pip
+    # tensorflow
+    # numpy
+    # pandas
     # scikitlearn
-    matplotlib
-    h5py
+    # matplotlib
+    # h5py
     conda
     binwalk-full
     cfn-lint
@@ -20,7 +20,7 @@ in
 [
   (callPackage ./fhs.nix {})
   (import ./vim.nix pkgs)
-  stable.arandr              # Screen control
+  arandr              # Screen control
   bashmount           # Mount USB storage
   bind                # DNS utilities
   google-chrome       # Web browser
@@ -114,7 +114,7 @@ in
   dotnet-sdk
   my-python
   # python2
-  stable.julia_11
+  julia_11
   rustup
   pypi2nix
   # purescript
@@ -168,7 +168,7 @@ in
   mariadb                # mariadb/mysql client
   redis
   postgresql_10          # pg client
-  stable.dbeaver                # global database client
+  dbeaver                # global database client
   openssl
   binutils-unwrapped
   android-studio
