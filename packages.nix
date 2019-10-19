@@ -69,7 +69,7 @@ in
   pv                  # monitor pipe progress
   xclip               # clipboard util
   appimage-run        # FHS script for AppImages
-  blueman             # bluetooth suite
+  stable.blueman             # bluetooth suite
   xorg.xkill          # kill a process by it's X window
   pmutils             # pm-hibernate and other utils
   moreutils           # `sponge` and others
@@ -120,9 +120,10 @@ in
   # purescript
   # psc-package
   nodejs-12_x
-  pharo
-  pharo-launcher
-  pharo-spur64
+  elixir
+  # pharo
+  # pharo-launcher
+  # pharo-spur64
   ## golang
   go
   hugo # static website gen
@@ -141,7 +142,7 @@ in
   font-manager
   libnotify
   libinput-gestures
-  qdirstat
+  # qdirstat
 
   ## Gnome
   lxappearance
@@ -159,7 +160,7 @@ in
   sublime3
   neovim                 # new vim
   insomnia               # better postman
-  postman
+  # postman
   robo3t                 # mongodb client, ex-robomongo
   virtualbox             # virtual machines
   docker                 # virtual processes
