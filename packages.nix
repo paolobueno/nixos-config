@@ -169,7 +169,7 @@ in
   mariadb                # mariadb/mysql client
   redis
   postgresql_10          # pg client
-  dbeaver                # global database client
+  stable.dbeaver                # global database client
   openssl
   binutils-unwrapped
   android-studio
