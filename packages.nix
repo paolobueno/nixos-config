@@ -93,6 +93,7 @@ in
   vips                # imagemagick alternative
   cudnn
   watchman            # file watcher
+  pinentry
 
 
   # terminal stuff
@@ -176,8 +177,8 @@ in
   hexedit
   silver-searcher
   john                   # brute force tool
-  awscli                 # Abdul Works Smoothly CLI
-  aws-sam-cli
+  # awscli                 # Abdul Works Smoothly CLI
+  # aws-sam-cli
   terraform_0_12
   heroku
   steghide               # finds files hidden inside other files
