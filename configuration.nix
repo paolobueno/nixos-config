@@ -65,7 +65,11 @@
   programs.mosh.enable = true;
   programs.java.enable = true;
   programs.ssh = {
-    startAgent = true;
+    startAgent = false;
+  };
+  programs.gnupg.agent = {
+    enable = true;
+    enableSSHSupport = true;
   };
 
   networking = {
