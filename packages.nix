@@ -165,12 +165,13 @@ in
   robo3t                 # mongodb client, ex-robomongo
   virtualbox             # virtual machines
   docker                 # virtual processes
+  docker-compose
   gnome3.gedit           # notepad
   # octaveFull             # MATLAB as in beer
   mariadb                # mariadb/mysql client
   redis
   postgresql_10          # pg client
-  stable.dbeaver                # global database client
+  dbeaver                # global database client
   openssl
   binutils-unwrapped
   android-studio
