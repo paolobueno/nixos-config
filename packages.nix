@@ -158,7 +158,6 @@ in
 
   # IDEs and devtools
   vscode                 # M$ Overlords
-  sublime3
   neovim                 # new vim
   insomnia               # better postman
   # postman
