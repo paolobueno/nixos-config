@@ -174,7 +174,7 @@
     # (import ./azure-cli-nix/default.nix)
   ];
 
-  environment.systemPackages = (import ./packages.nix pkgs);
+  environment.systemPackages = (import ./linux-packages.nix pkgs);
   services = (import ./services.nix pkgs);
 
   system.stateVersion = "19.09";
