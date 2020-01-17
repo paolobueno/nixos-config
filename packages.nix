@@ -44,6 +44,7 @@ pkgs: with pkgs;
 
   # Editors and tools
   neovim                 # new vim
+  jq
   # postman
   # virtualbox             # virtual machines
   docker                 # virtual processes
