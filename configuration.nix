@@ -44,11 +44,11 @@
     support32Bit = true;
   };
 
-  boot.extraModprobeConfig = ''
-    options ath10k_core skip_otp=y
-  '';
+  # boot.extraModprobeConfig = ''
+    # options ath10k_core skip_otp=y
+  # '';
   # hardware.enableAllFirmware = true;
-  hardware.opengl.extraPackages = [ pkgs.vaapiIntel ];
+  # hardware.opengl.extraPackages = [ pkgs.vaapiIntel ];
 
   programs.zsh = {
     enable = true;
@@ -61,9 +61,9 @@
     ohMyZsh.plugins = ["git"];
     ohMyZsh.theme = "agnoster";
   };
-  programs.adb.enable = true;
-  programs.mosh.enable = true;
-  programs.java.enable = true;
+  programs.adb.enable = false;
+  programs.mosh.enable = false;
+  programs.java.enable = false;
   programs.ssh = {
     startAgent = false;
   };
@@ -80,8 +80,8 @@
     ];
     networkmanager = {
       enable = true;
-      enableStrongSwan = true;
-      packages = [ pkgs.networkmanager-openconnect ];
+      # enableStrongSwan = true;
+      # packages = [ pkgs.networkmanager-openconnect ];
     };
     hostName = "paolo-nixos";
   };
@@ -124,15 +124,15 @@
     gc.automatic = true;
   };
 
-  hardware.opengl.driSupport32Bit = true;
+  # hardware.opengl.driSupport32Bit = true;
 
   #NVIDIA
 
   ## bumblebee
-  hardware.bumblebee.enable = true;
-  hardware.bumblebee.driver = "nvidia";
-  hardware.bumblebee.pmMethod = "bbswitch";
-  hardware.bumblebee.connectDisplay = true;
+  # hardware.bumblebee.enable = true;
+  # hardware.bumblebee.driver = "nvidia";
+  # hardware.bumblebee.pmMethod = "bbswitch";
+  # hardware.bumblebee.connectDisplay = true;
 
   ## Optimus
   # hardware.nvidiaOptimus.disable = true;
@@ -147,11 +147,11 @@
   # };
 
   # https://bbs.archlinux.org/viewtopic.php?id=223056
-  boot.kernelParams = [
-    ''acpi_rev_override=5''
+  # boot.kernelParams = [
+    # ''acpi_rev_override=5''
     # ''acpi_osi=! acpi_osi="Windows 2009"''
     # ''pcie_port_pm=off''
-  ];
+  # ];
 
   virtualisation.docker.enable = true;
 
@@ -161,18 +161,18 @@
 
   nixpkgs.config = {
     allowUnfree = true;
-    packageOverrides = pkgs: {
-      stable = import <stable> {
-        config = config.nixpkgs.config;
-      };
-      unstable = import <unstable> {
-        config = config.nixpkgs.config;
-      };
-    };
+    # packageOverrides = pkgs: {
+      # stable = import <stable> {
+        # config = config.nixpkgs.config;
+      # };
+      # unstable = import <unstable> {
+        # config = config.nixpkgs.config;
+      # };
+    # };
   };
-  nixpkgs.overlays = [
+  # nixpkgs.overlays = [
     # (import ./azure-cli-nix/default.nix)
-  ];
+  # ];
 
   environment.systemPackages = (import ./linux-packages.nix pkgs);
   services = (import ./services.nix pkgs);

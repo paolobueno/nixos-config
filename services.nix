@@ -17,9 +17,9 @@ pkgs : {
 
   # infrastructure
   openssh.enable = true;
-  printing.enable = true;
-  illum.enable = true;
-  teamviewer.enable = false;
+  # printing.enable = true;
+  # illum.enable = true;
+  # teamviewer.enable = false;
 
   compton = {
     enable = true;
@@ -58,7 +58,7 @@ pkgs : {
     xkbVariant = ",";
     xkbOptions = "grp:toggle";
 
-    videoDrivers = [ "intel" ];
+    # videoDrivers = [ "intel" ];
     # videoDrivers = [ "nvidia" ];
     desktopManager = {
       xterm.enable = false;
@@ -93,7 +93,7 @@ pkgs : {
     };
 
     libinput = {
-      enable = true;
+      enable = false;
       disableWhileTyping = true;
       naturalScrolling = true;
     };

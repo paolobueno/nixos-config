@@ -11,7 +11,7 @@ pkgs: with pkgs;
 
   # terminal stuff
   tmux                # terminal multiplexer
-  
+
   # rxvt_unicode
   ngrok
   # alacritty         # GPU acellerated emulator

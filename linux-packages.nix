@@ -54,8 +54,8 @@ in
   unixtools.xxd       # hexdump
   pciutils
   ntfs3g              # ntfs mount/format support
-  s-tui               # cpu governor monitor and stress test runner
-  stress              # stress runner, optional dep for s-tui
+  # s-tui               # cpu governor monitor and stress test runner
+  # stress              # stress runner, optional dep for s-tui
   htop                # task manager
   jq                  # sed for json
   tree                # tree
@@ -63,7 +63,7 @@ in
   pv                  # monitor pipe progress
   xclip               # clipboard util
   appimage-run        # FHS script for AppImages
-  stable.blueman             # bluetooth suite
+  # blueman             # bluetooth suite
   xorg.xkill          # kill a process by it's X window
   pmutils             # pm-hibernate and other utils
   moreutils           # `sponge` and others
