@@ -70,8 +70,8 @@ in
   libcaca             # render bitmaps as text
   # (wine.override { wineBuild = "wineWow"; })
   caddy               # https server
-  dmidecode # BIOS info parser
-  glxinfo # GL tester
+  dmidecode           # BIOS info parser
+  glxinfo             # GL tester
   acpi
   lm_sensors
   pandoc              # anything-to-anything converter
@@ -93,7 +93,6 @@ in
   my-python
   dotnet-sdk
   libcap
-
 
   # desktop
   hicolor-icon-theme
@@ -155,17 +154,16 @@ in
   # vpnc                # another cisco vpn client
 
   # Extra, personal
-  dropbox
+  # dropbox
   crawl
   streamlink
   keybase
   keybase-gui
-  # exercism             # exercism learning website cli
   discord
 
   # Gaems
   openttd
-  # steam
+  steam
   # franz
 ] ++ (with nodePackages; [
   yarn                   # Alternative to npm

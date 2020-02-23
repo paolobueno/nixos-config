@@ -54,9 +54,9 @@ pkgs : {
     enableTCP = false;
     exportConfiguration = true;
 
-    layout = "us";
-    xkbVariant = ",";
-    xkbOptions = "grp:toggle";
+    layout = "br,us";
+    xkbVariant = "thinkpad,";
+    xkbOptions = "grp:alt_space_toggle";
 
     # videoDrivers = [ "intel" ];
     # videoDrivers = [ "nvidia" ];

@@ -20,7 +20,8 @@ pkgs: with pkgs;
   # runtimes
   ruby
   julia
-  rustup
+  rustc
+  cargo
   pypi2nix
   vlang
   # purescript
@@ -32,7 +33,6 @@ pkgs: with pkgs;
   # pharo-spur64
   ## golang
   go
-  hugo # static website gen
 
 
   pkgconfig
@@ -57,6 +57,7 @@ pkgs: with pkgs;
   binutils-unwrapped
   # android-studio
   hexedit
+  hugo                  # static website gen
   # silver-searcher
   # john                   # brute force tool
   # awscli                 # Abdul Works Smoothly CLI
